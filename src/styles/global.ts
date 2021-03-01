@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import breakpoints from './breakpoints';
-import typography from './typography';
-
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-  
   *,
   *::after,
   *::before {
@@ -26,24 +21,28 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     scroll-behavior: smooth;
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
-    @media screen and (max-width: ${breakpoints.lg}) { // width < 1280
+
+    @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.lg}) { // width < 1280
       font-size: 56.25%; //1 rem = 9px
     }
-    @media screen and (max-width: ${breakpoints.sm}) { // width < 768
+    
+    @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.sm}) { // width < 768
         font-size: 50%; //1 rem = 8px
     }
   }
 
   body {
-    background: #f0f0f5;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased !important;
+    background: ${({ theme }) => theme.colors.gray._100};
   }
 
   body, input, button {
-    font-family: ${typography.family}; 
-    font-size: ${typography.size.s3};
+    font-size: 1.6rem;
+    font-family: ${({ theme }) => theme.typography.family}; 
   }
 
   button {
