@@ -1,17 +1,13 @@
 import React from 'react';
 
-import styles from '../styles';
+import { Hero } from '~/views';
+import { Navbar } from '~/layouts';
 
-const { HeroSection, HeroGrid } = styles;
-
-const Home = () => {
-  return (
-    <HeroSection>
-      <HeroGrid>
-        <h1>Hello World</h1>
-      </HeroGrid>
-    </HeroSection>
-  );
-};
+const Home = () => (
+  <>
+    <Navbar />
+    <Hero />
+  </>
+);
 
 export default Home;

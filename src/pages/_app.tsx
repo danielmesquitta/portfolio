@@ -1,16 +1,17 @@
+import { AppProps } from 'next/app';
 import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
-import { Theme } from '../@types';
 
-import { GlobalStyle, breakpoints, colors, typography } from '../styles';
+import { GlobalStyle, breakpoints, colors, grid, typography } from '~/styles';
 
-const theme: Theme = {
+const theme = {
   breakpoints,
   colors,
+  grid,
   typography,
 };
 
-const App = ({ Component, pageProps }) => (
+const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <Helmet>
       <title>danielmesquitta | Portfolio</title>

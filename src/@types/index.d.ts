@@ -1,1 +1,1 @@
-export { Theme } from './styles';
+declare module '*.svg';

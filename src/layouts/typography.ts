@@ -3,23 +3,26 @@ import styled from 'styled-components';
 export const H1 = styled.h1`
   font-size: 7.2rem;
   line-height: 120%;
+  letter-spacing: 1px;
 `;
 
 export const H2 = styled.h2`
   font-size: 2.8rem;
   line-height: 120%;
+  letter-spacing: 1px;
 `;
 
 export const H3 = styled.h3`
   font-size: 1.4rem;
   line-height: 120%;
-  letter-spacing: 20%;
+  letter-spacing: 0.25px;
   text-transform: uppercase;
   font-weight: ${({ theme }) => theme.typography.weight.regular};
 `;
 
 export const H4 = styled.h4`
   font-size: 4rem;
+  letter-spacing: 0.8px;
   line-height: 120%;
   letter-spacing: 10%;
 `;
@@ -27,16 +30,19 @@ export const H4 = styled.h4`
 export const H5 = styled.h5`
   font-size: 2.4rem;
   line-height: 120%;
+  letter-spacing: 0.5px;
   letter-spacing: 10%;
 `;
 
 export const H6 = styled.h6`
   font-size: 4.2rem;
+  letter-spacing: 0.85px;
   line-height: 120%;
 `;
 
 export const H7 = styled.h6`
   font-size: 3.2rem;
+  letter-spacing: 0px;
   line-height: 120%;
   letter-spacing: 10%;
 `;

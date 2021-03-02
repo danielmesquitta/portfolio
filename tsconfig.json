@@ -14,8 +14,21 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noUnusedLocals": true,
-    "typeRoots": ["./node_modules/@types", "./types/"]
+    "typeRoots": ["./node_modules/@types", "./types/", "./@types"],
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "./src"
+      }
+    }
+  }
 }
