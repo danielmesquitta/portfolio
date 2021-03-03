@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { Section } from '~/layouts';
 
-const Container = styled(Section)`
+const Container = styled.nav`
+  display: grid;
+  grid-template-columns: ${({ theme }) => theme.grid.wrapper};
   position: absolute;
   top: 0;
   left: 0;

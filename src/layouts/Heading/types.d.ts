@@ -3,6 +3,7 @@ interface HeadingContainerProps {
 }
 
 interface HeadingProps extends HeadingContainerProps {
+  id?: string | number;
   title: string | React.Fragment;
   subTitle: string | React.Fragment;
 }

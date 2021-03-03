@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 import Dots from '../../assets/dots.svg';
 import { Section, Grid, Title, SubTitle, Circle } from './styles';
 
-const Hero = () => {
+const Hero = forwardRef<HTMLElement, any>((props, ref) => {
   return (
-    <Section>
+    <Section {...props} {...{ ref }}>
       <Grid>
-        <main>
+        <header id="home">
           <Title>Hello, This is Daniel</Title>
           <SubTitle>
             <hr /> Full-stack Developer
           </SubTitle>
-        </main>
+        </header>
         <aside>
           <a>
             <FiGithub />
@@ -31,6 +31,6 @@ const Hero = () => {
       <Circle size={600} top="-19rem" right="-12rem" />
     </Section>
   );
-};
+});
 
 export default Hero;

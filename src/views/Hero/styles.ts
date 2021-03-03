@@ -23,7 +23,7 @@ export const Grid = styled(GridLayout)`
   min-height: 100vh;
   position: relative;
 
-  main {
+  header {
     position: relative;
     z-index: 1;
     grid-column: 1 / -1;

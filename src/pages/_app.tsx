@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, breakpoints, colors, grid, typography } from '~/styles';
+import { ScrollStateProvider } from '~/hooks';
 
 const theme = {
   breakpoints,
@@ -22,8 +23,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       />
     </Helmet>
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ScrollStateProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ScrollStateProvider>
     </ThemeProvider>
   </>
 );

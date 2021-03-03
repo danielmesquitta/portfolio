@@ -20,6 +20,7 @@ export const Grid = styled(GridLayout)`
     &-container {
       grid-column: 1 / -1;
       max-width: 116rem;
+      width: 100%;
     }
 
     &-slide {
@@ -38,7 +39,7 @@ export const Grid = styled(GridLayout)`
   }
 
   .prev {
-    right: 8rem;
+    right: 7rem;
   }
 `;
 

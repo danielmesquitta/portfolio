@@ -7,6 +7,7 @@ const Container = styled.div`
   min-height: 35rem;
   padding: 5rem 1rem 2rem;
   transition: all 0.2s;
+  margin: 1px;
 
   :hover {
     border: 1px solid ${({ theme }) => theme.colors.primary._200};

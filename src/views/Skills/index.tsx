@@ -1,15 +1,16 @@
 import React from 'react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { withRouter } from 'next/router';
 
 import { Card } from '~/components';
 import { Section, Grid, Heading } from './styles';
 import data from './data';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
-const Skills = () => (
+const Skills: React.FC = () => (
   <Section>
     <Grid>
       <Heading
@@ -21,12 +22,14 @@ const Skills = () => (
             simple
           </>
         }
+        id="skills"
       />
       <Swiper
         loop
-        spaceBetween={31}
+        spaceBetween={30}
         slidesPerView={3}
         navigation={{ prevEl: '.prev', nextEl: '.next' }}
+        autoplay={{ delay: 5000 }}
       >
         {data.map((cardProps) => (
           <SwiperSlide>
@@ -40,4 +43,4 @@ const Skills = () => (
   </Section>
 );
 
-export default Skills;
+export default withRouter(Skills);
