@@ -21,7 +21,7 @@ const Container = styled(Section)`
       color: ${({ theme }) => theme.colors.gray._000};
       font-size: 2.4rem;
 
-      b {
+      span {
         font-weight: ${({ theme }) => theme.typography.weight.regular};
         opacity: 0.7;
       }

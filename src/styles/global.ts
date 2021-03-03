@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     hyphens: auto;
     min-height: 100%;
     word-wrap: break-word;
+    overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
@@ -40,16 +41,17 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.gray._100};
   }
 
-  body, input, button {
+  body, input, button, a, a:visited {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.typography.family}; 
+    font-family: ${({ theme }) => theme.typography.family};
+    color: ${({ theme }) => theme.colors.gray._400};
   }
 
   button {
     cursor: pointer;
   }
 
-  a {
+  a, a:visited {
     text-decoration: none;
     cursor: pointer;
   }

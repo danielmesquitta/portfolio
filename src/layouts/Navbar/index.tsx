@@ -7,7 +7,7 @@ const Navbar: React.FC = (props) => (
     <nav>
       <a href="#home">
         <strong>daniel</strong>
-        <b>mesquitta</b>
+        <span>mesquitta</span>
       </a>
       <div>
         <a href="#home">Home</a>

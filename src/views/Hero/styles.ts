@@ -94,5 +94,5 @@ export const Circle = styled(CircleLayout)`
   right: ${({ right }) => right};
   top: ${({ top }) => top};
   background-color: ${({ theme }) => theme.colors.secondary._100}0D;
-  box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.primary._200}1A;
+  box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.gray._400}1A;
 `;
