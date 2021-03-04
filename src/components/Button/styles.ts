@@ -6,12 +6,18 @@ export const Container = styled.button<ButtonProps>`
   min-width: 12rem;
   white-space: nowrap;
   border: 0;
-  transition: all 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   text-align: center;
+
+  ${({ theme }) => {
+    const { speed, transitions } = theme.animations;
+    return css`
+      transition: all ${speed._200} ${transitions.basic};
+    `;
+  }}
 
   svg {
     position: relative;

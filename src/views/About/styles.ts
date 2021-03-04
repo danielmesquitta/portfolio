@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Container as FeatureBox } from '~/components/FeatureBox/styles';
 
 import { Section as SectionLayout, Grid as GridLayout } from '~/layouts';
 
@@ -33,5 +34,10 @@ export const Grid = styled(GridLayout)`
     grid-column: span 6;
     margin-top: 6rem;
     width: 60vw;
+  }
+
+  ${FeatureBox} {
+    margin-top: 12rem;
+    grid-column: span 4;
   }
 `;

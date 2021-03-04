@@ -10,12 +10,26 @@ const Container = styled.nav<NavbarContainerProps>`
   width: 100vw;
   z-index: 10;
 
+  ${({ theme }) => {
+    const { fadeIn, speed, transitions } = theme.animations;
+    return css`
+      animation: ${speed._200} ${fadeIn()} ${transitions.basic};
+    `;
+  }}
+
   ${({ currentSection }) =>
     currentSection > 1 &&
     css`
       box-shadow: 0px 1rem 2rem ${({ theme }) => theme.colors.gray._400}0D;
       background-color: ${({ theme }) => theme.colors.gray._500};
       position: fixed;
+
+      ${({ theme }) => {
+        const { slideDown, transitions, speed } = theme.animations;
+        return css`
+          animation: ${speed._200} ${slideDown} ${transitions.basic};
+        `;
+      }}
 
       > div {
         margin: 0 !important;
@@ -80,7 +94,13 @@ const Container = styled.nav<NavbarContainerProps>`
         padding: 1.2rem 1rem;
         font-size: 1.6rem;
         opacity: 0.7;
-        transition: all 0.4s;
+
+        ${({ theme }) => {
+          const { speed, transitions } = theme.animations;
+          return css`
+            transition: all ${speed._200} ${transitions.basic};
+          `;
+        }}
 
         :nth-child(${({ currentSection }) => currentSection}) {
           opacity: 1;

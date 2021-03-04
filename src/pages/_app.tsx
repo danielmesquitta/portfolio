@@ -2,10 +2,18 @@ import { AppProps } from 'next/app';
 import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle, breakpoints, colors, grid, typography } from '~/styles';
+import {
+  GlobalStyle,
+  animations,
+  breakpoints,
+  colors,
+  grid,
+  typography,
+} from '~/styles';
 import { ScrollStateProvider } from '~/hooks';
 
 const theme = {
+  animations,
   breakpoints,
   colors,
   grid,

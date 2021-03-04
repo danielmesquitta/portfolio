@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { H7, P } from '~/layouts';
 
 export const Container = styled.div`
@@ -30,7 +30,13 @@ export const Container = styled.div`
     justify-content: space-between;
     opacity: 0;
     background-color: ${({ theme }) => theme.colors.gray._000}F2;
-    transition: all 0.2s;
+
+    ${({ theme }) => {
+      const { speed, transitions } = theme.animations;
+      return css`
+        transition: all ${speed._100} ${transitions.basic};
+      `;
+    }}
 
     :hover {
       opacity: 1;

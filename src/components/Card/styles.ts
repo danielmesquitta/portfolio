@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Container = styled.div`
   text-align: center;
@@ -6,8 +6,14 @@ const Container = styled.div`
   border-radius: 4px;
   min-height: 35rem;
   padding: 5rem 1rem 2rem;
-  transition: all 0.2s;
   margin: 1px;
+
+  ${({ theme }) => {
+    const { speed, transitions } = theme.animations;
+    return css`
+      transition: all ${speed._100} ${transitions.basic};
+    `;
+  }}
 
   :hover {
     border: 1px solid ${({ theme }) => theme.colors.primary._200};

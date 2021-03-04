@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import {
   Section as SectionLayout,
@@ -22,6 +22,24 @@ export const Section = styled(SectionLayout)`
 export const Grid = styled(GridLayout)`
   min-height: 100vh;
   position: relative;
+
+  ${({ theme }) => {
+    const { fadeIn, speed, transitions } = theme.animations;
+    return css`
+      header {
+        animation: ${speed._300} ${fadeIn(15)} ${transitions.basic};
+      }
+      aside {
+        ${[1, 2, 3].map(
+          (id) => css`
+            a:nth-of-type(${id}) {
+              animation: ${speed._400} ${fadeIn(id * 20)} ${transitions.basic};
+            }
+          `
+        )}
+      }
+    `;
+  }}
 
   header {
     position: relative;
@@ -95,4 +113,11 @@ export const Circle = styled(CircleLayout)`
   top: ${({ top }) => top};
   background-color: ${({ theme }) => theme.colors.secondary._100}0D;
   box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.gray._400}1A;
+
+  ${({ theme }) => {
+    const { breathing, transitions } = theme.animations;
+    return css`
+      animation: 5s ${breathing} ${transitions.basic} infinite;
+    `;
+  }}
 `;
