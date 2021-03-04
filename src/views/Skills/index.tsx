@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { withRouter } from 'next/router';
 
 import { Card } from '~/components';
 import { Section, Grid, Heading } from './styles';
@@ -10,10 +9,11 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
 SwiperCore.use([Autoplay, Navigation]);
 
-const Skills: React.FC = () => (
-  <Section>
+const Skills = forwardRef<HTMLElement, any>((props, ref) => (
+  <Section {...props} ref={ref}>
     <Grid>
       <Heading
+        id="skills"
         title="Skills"
         subTitle={
           <>
@@ -22,7 +22,6 @@ const Skills: React.FC = () => (
             simple
           </>
         }
-        id="skills"
       />
       <Swiper
         loop
@@ -41,6 +40,6 @@ const Skills: React.FC = () => (
       <FiArrowRight className="next" />
     </Grid>
   </Section>
-);
+));
 
-export default withRouter(Skills);
+export default Skills;

@@ -1,4 +1,4 @@
 interface ScrollStateContext {
-  isOnHeroSection: boolean;
-  setIsOnHeroSection: (isOnHeroSection: boolean) => void;
+  currentSection: number;
+  setCurrentSection: (currentSection: number) => void;
 }

@@ -1,0 +1,3 @@
+interface NavbarContainerProps {
+  currentSection: number;
+}
