@@ -84,6 +84,8 @@ const Container = styled.nav<NavbarContainerProps>`
 
         :nth-child(${({ currentSection }) => currentSection}) {
           opacity: 1;
+          font-weight: ${({ theme }) =>
+            theme.typography.weight.bold} !important;
 
           :hover {
             opacity: 1;
@@ -91,7 +93,7 @@ const Container = styled.nav<NavbarContainerProps>`
         }
 
         :hover {
-          opacity: 0.9;
+          opacity: 1;
         }
 
         &:last-of-type {
