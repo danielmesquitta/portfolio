@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { FiArrowRight } from 'react-icons/fi';
-import Button from '../Button';
+import React from 'react';
+import { FiBook } from 'react-icons/fi';
 
+import Button from '~/components/Button';
 import { Container, Title, SubTitle } from './styles';
 
 const Project: React.FC<ProjectProps> = ({
@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({
           <SubTitle>{subTitles.join(' / ')}</SubTitle>
         </div>
         <Button appearance="primary" size="sm">
-          View <FiArrowRight />
+          Learn more <FiBook />
         </Button>
       </div>
     </Container>

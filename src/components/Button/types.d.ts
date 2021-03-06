@@ -3,4 +3,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
   hasHover?: boolean;
   size?: 'sm' | 'md';
+  href?: string;
+  target?: '_blank';
 }

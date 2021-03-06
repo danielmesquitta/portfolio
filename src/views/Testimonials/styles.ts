@@ -6,7 +6,7 @@ export const Section = styled(SectionLayout)`
   position: relative;
   background-color: ${({ theme }) => theme.colors.gray._400};
   overflow: hidden;
-  min-height: 60rem;
+  min-height: 50rem;
 
   > div:nth-child(2),
   > img {
@@ -39,13 +39,15 @@ export const Grid = styled(GridLayout)`
   position: relative;
   z-index: 2;
   color: ${({ theme }) => theme.colors.gray._100};
-  padding: 9rem 0;
+  padding: 0 0 9rem;
   text-align: center;
 
   > span {
     grid-column: 1 / -1;
     font-size: 12rem;
     height: 0;
+    position: relative;
+    top: 6rem;
     font-weight: ${({ theme }) => theme.typography.weight.black};
   }
 
@@ -74,29 +76,42 @@ export const Grid = styled(GridLayout)`
     }
   }
 
-  > p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto auto 3rem auto;
-    grid-column: 2 / 12;
-    max-width: 70rem;
-  }
-
-  > div {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    > img {
-      width: 4rem;
-      height: 4rem;
-      margin: auto;
-      border-radius: 50%;
+  .swiper {
+    &-container {
       position: relative;
-      top: 1rem;
+      grid-column: 2 / 12;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      > p {
+        text-align: center;
+        max-width: 70rem;
+        margin: auto;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        > img {
+          width: 4rem;
+          height: 4rem;
+          margin: 0 auto 1rem;
+          border-radius: 50%;
+        }
+      }
     }
   }
 `;
