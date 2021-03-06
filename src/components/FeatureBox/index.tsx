@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { getElementPosition, getScrollPosition } from '~/helpers';
+import { useScrollState } from '~/hooks';
 import { P } from '~/layouts';
 
 import { Container, Title } from './styles';
@@ -15,6 +15,8 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({
   const [currentValue, setCurrentValue] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const { getScrollPosition, getElementPosition } = useScrollState();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {

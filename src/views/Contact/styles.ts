@@ -45,41 +45,6 @@ export const Grid = styled(GridLayout)`
   }
 
   footer {
-    grid-column: 1 / -1;
     padding: 9rem 0 6rem 0;
-    width: 20rem;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-
-    a {
-      padding: 1rem;
-      border: 1px solid ${({ theme }) => theme.colors.gray._100};
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      ${({ theme }) => {
-        const { speed, transitions } = theme.animations;
-        return css`
-          transition: all ${speed._100} ${transitions.basic};
-        `;
-      }}
-
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.gray._100};
-
-        svg {
-          color: ${({ theme }) => theme.colors.gray._400};
-        }
-      }
-
-      svg {
-        color: ${({ theme }) => theme.colors.gray._100};
-        width: 2rem;
-        height: 2rem;
-      }
-    }
   }
 `;

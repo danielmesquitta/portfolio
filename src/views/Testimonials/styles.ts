@@ -45,7 +45,7 @@ export const Grid = styled(GridLayout)`
   > span {
     grid-column: 1 / -1;
     font-size: 12rem;
-    line-height: 0.8;
+    height: 0;
     font-weight: ${({ theme }) => theme.typography.weight.black};
   }
 

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import Button from '../Button';
-import Image from 'next/image';
 
 import { Container, Title, SubTitle } from './styles';
 
-const Project: React.FC<ProjectProps> = ({ image, title, subTitles }) => {
+const Project: React.FC<ProjectProps> = ({
+  image,
+  title,
+  subTitles,
+  isVisible,
+}) => {
   return (
-    <Container>
+    <Container isVisible={isVisible}>
       <img src={image} alt="" />
       <div>
         <div>

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { SocialLinks } from '~/layouts';
 
 import Dots from '../../assets/dots.svg';
 import { Section, Grid, Title, SubTitle, Circle } from './styles';
@@ -14,17 +15,7 @@ const Hero = forwardRef<HTMLElement, any>((props, ref) => {
             <hr /> Full-stack Developer
           </SubTitle>
         </header>
-        <aside>
-          <a>
-            <FiGithub />
-          </a>
-          <a>
-            <FiLinkedin />
-          </a>
-          <a>
-            <FiMail />
-          </a>
-        </aside>
+        <SocialLinks as="aside" vertical />
         <Dots />
       </Grid>
       <Circle size={800} bottom="-12rem" left="-13rem" />

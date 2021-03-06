@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import Wrapper from './styles';
 
-const Container: React.FC = ({ children, ...rest }) => (
-  <Wrapper {...rest}>{children}</Wrapper>
+const Container = forwardRef<HTMLDivElement, any>(
+  ({ children, ...rest }, ref) => (
+    <Wrapper {...rest} ref={ref}>
+      {children}
+    </Wrapper>
+  )
 );
 
 export default Container;

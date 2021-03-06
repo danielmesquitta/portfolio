@@ -1,8 +1,8 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiMail, FiSend } from 'react-icons/fi';
+import { FiSend } from 'react-icons/fi';
 
 import { Section, Grid } from './styles';
-import { Heading } from '~/layouts';
+import { Heading, SocialLinks } from '~/layouts';
 import { Button, Input } from '~/components';
 
 const Contact: React.FC = () => {
@@ -23,17 +23,7 @@ const Contact: React.FC = () => {
             Send <FiSend />
           </Button>
         </div>
-        <footer>
-          <a>
-            <FiGithub />
-          </a>
-          <a>
-            <FiLinkedin />
-          </a>
-          <a>
-            <FiMail />
-          </a>
-        </footer>
+        <SocialLinks as="footer" appearance="secondary" />
       </Grid>
     </Section>
   );

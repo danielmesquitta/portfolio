@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Section as LayoutSection, Grid as LayoutGrid } from '~/layouts';
+import { hexToRgba } from '~/helpers';
 
 export const Section = styled(LayoutSection)`
   background: linear-gradient(
@@ -32,5 +33,17 @@ export const ProjectsGrid = styled(LayoutGrid)`
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-radius: 0.4rem;
-  box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.gray._400}1A;
+  ${({ theme }) => {
+    const { speed, transitions } = theme.animations;
+    return css`
+      transition: all ${speed._100} ${transitions.basic};
+    `;
+  }}
+
+  ${(props) =>
+    props.hasShadow &&
+    css`
+      box-shadow: 0px 1.5rem 3.5rem
+        ${({ theme }) => hexToRgba(theme.colors.gray._400, 0.05)};
+    `}
 `;

@@ -52,48 +52,6 @@ export const Grid = styled(GridLayout)`
     height: 100vh;
   }
 
-  aside {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    z-index: 1;
-    height: 20rem;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    a {
-      padding: 1rem;
-      border: 1px solid ${({ theme }) => theme.colors.gray._100};
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      ${({ theme }) => {
-        const { speed, transitions } = theme.animations;
-        return css`
-          transition: all ${speed._100} ${transitions.basic};
-        `;
-      }}
-
-      :hover {
-        background-color: ${({ theme }) => theme.colors.gray._100};
-
-        svg {
-          color: ${({ theme }) => theme.colors.secondary._300};
-        }
-      }
-
-      svg {
-        color: ${({ theme }) => theme.colors.gray._100};
-        width: 2rem;
-        height: 2rem;
-      }
-    }
-  }
-
   > svg:last-of-type {
     position: absolute;
     bottom: -8rem;

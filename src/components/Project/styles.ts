@@ -1,9 +1,33 @@
 import styled, { css } from 'styled-components';
 import { H7, P } from '~/layouts';
 
-export const Container = styled.div`
+export const Container = styled.div<ProjectContainerProps>`
   position: relative;
   height: 35rem;
+
+  ${({ theme, isVisible }) => {
+    const { slideUp, speed, transitions } = theme.animations;
+    const gridIds = [];
+    for (let id = 1; id <= 10; id++) {
+      gridIds.push(id);
+    }
+    const getSlideSpeed = (id: number, speed: string) =>
+      Number(speed.replace('s', '')) * id;
+    const getDelay = (id: number) => ((100 / gridIds.length) * id) / 2;
+    if (isVisible) {
+      return gridIds.map((id) => {
+        return css`
+          &:nth-child(${id}) {
+            animation: ${getSlideSpeed(id, speed._200)}s
+              ${slideUp(getDelay(id))} ${transitions.basic};
+          }
+        `;
+      });
+    }
+    return css`
+      opacity: 0;
+    `;
+  }}
 
   > img {
     position: absolute;

@@ -17,40 +17,50 @@ export default {
   },
 
   rotate360: keyframes`
-  from { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
-`,
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  `,
 
   scale: keyframes`
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-`,
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  `,
 
   breathing: keyframes`
-  0% { transform: scale(0.96) }
-  50% { transform: scale(1) }
-  100% { transform: scale(0.96) }
-`,
+    0% { transform: scale(0.96) }
+    50% { transform: scale(1) }
+    100% { transform: scale(0.96) }
+  `,
 
   fadeIn: (start = 0) => keyframes`
-  0% { opacity: 0 }
-  ${start + '%'} { opacity: 0 }
-  100% { opacity: 1 }
+    0% { opacity: 0 }
+    ${start + '%'} { opacity: 0 }
+    100% { opacity: 1 }
   `,
 
   slideDown: keyframes`
-  from { transform: translateY(-100%) }
-  to { transform: translateY(0) }
-`,
+    from { transform: translateY(-100%) }
+    to { transform: translateY(0) }
+  `,
 
-  slideUp: keyframes`
-  from { transform: translateY(100%) }
-  to { transform: translateY(0) }
-`,
+  slideUp: (start = 0) => keyframes`
+    0% { 
+      opacity: 0; 
+      transform: translateY(100%); 
+    }
+    ${start + '%'} {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0%);
+    }
+  `,
 };
 
 // animation: 1s ${rotate360} linear infinite;
