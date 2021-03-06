@@ -4,7 +4,7 @@ import { H6 } from '~/layouts';
 
 export const Container = styled.div`
   padding: 2rem 1rem;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   border: 1px solid ${({ theme }) => theme.colors.gray._200};
   min-height: 15rem;
   text-align: center;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import {
   Section as SectionLayout,
@@ -36,6 +36,18 @@ export const Grid = styled(GridLayout)`
     width: 4rem;
     height: 4rem;
     color: ${({ theme }) => theme.colors.primary._200};
+
+    ${({ theme }) => {
+      const { speed, transitions } = theme.animations;
+      return css`
+        transition: all ${speed._100} ${transitions.basic};
+      `;
+    }}
+
+    &:hover {
+      transform: scale(1.1);
+      color: ${({ theme }) => theme.colors.primary._100};
+    }
   }
 
   .prev {

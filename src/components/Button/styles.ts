@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.button<ButtonProps>`
   padding: ${({ size }) => (size === 'md' ? '1.4rem 2.5rem' : '0.9rem 2.5rem')};
-  border-radius: 4px;
+  border-radius: 0.4rem;
   min-width: 12rem;
   white-space: nowrap;
   border: 0;
@@ -15,7 +15,7 @@ export const Container = styled.button<ButtonProps>`
   ${({ theme }) => {
     const { speed, transitions } = theme.animations;
     return css`
-      transition: all ${speed._200} ${transitions.basic};
+      transition: all ${speed._100} ${transitions.basic};
     `;
   }}
 

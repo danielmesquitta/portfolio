@@ -31,6 +31,6 @@ export const ProjectsGrid = styled(LayoutGrid)`
   margin: 3rem 0 0;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.gray._400}1A;
 `;

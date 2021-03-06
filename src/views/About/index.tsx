@@ -9,8 +9,8 @@ import { Button, FeatureBox } from '~/components';
 import { Section, Grid } from './styles';
 import data from './data';
 
-const About = forwardRef<HTMLElement, any>(() => (
-  <Section>
+const About = forwardRef<HTMLElement, any>((props, ref) => (
+  <Section {...props} ref={ref}>
     <Grid>
       <Heading id="about" title="About me" subTitle="Who am I?" />
       <P>{data}</P>
@@ -24,9 +24,16 @@ const About = forwardRef<HTMLElement, any>(() => (
           </>
         }
       />
-      <FeatureBox title="2+" content="years coding" />
-      <FeatureBox title="1000+" content="Github commits in the last year" />
-      <FeatureBox title="54" content="Some other stuff I don’t know yet." />
+      <FeatureBox finalValue={2} hasPlus content="years coding" />
+      <FeatureBox
+        finalValue={1000}
+        hasPlus
+        content="Github commits in the last year"
+      />
+      <FeatureBox
+        finalValue={54}
+        content="Some other stuff I don’t know yet."
+      />
     </Grid>
     <Dots />
   </Section>

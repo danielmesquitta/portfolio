@@ -66,10 +66,25 @@ export const Grid = styled(GridLayout)`
     a {
       padding: 1rem;
       border: 1px solid ${({ theme }) => theme.colors.gray._100};
-      border-radius: 10rem;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      ${({ theme }) => {
+        const { speed, transitions } = theme.animations;
+        return css`
+          transition: all ${speed._100} ${transitions.basic};
+        `;
+      }}
+
+      :hover {
+        background-color: ${({ theme }) => theme.colors.gray._100};
+
+        svg {
+          color: ${({ theme }) => theme.colors.secondary._300};
+        }
+      }
 
       svg {
         color: ${({ theme }) => theme.colors.gray._100};

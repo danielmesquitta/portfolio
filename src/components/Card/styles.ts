@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const Container = styled.div`
   text-align: center;
   border: 1px solid ${({ theme }) => theme.colors.gray._200};
-  border-radius: 4px;
+  border-radius: 0.4rem;
   min-height: 35rem;
   padding: 5rem 1rem 2rem;
   margin: 1px;

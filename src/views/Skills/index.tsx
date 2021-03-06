@@ -31,7 +31,7 @@ const Skills = forwardRef<HTMLElement, any>((props, ref) => (
         autoplay={{ delay: 5000 }}
       >
         {data.map((cardProps) => (
-          <SwiperSlide>
+          <SwiperSlide key={cardProps.title}>
             <Card {...cardProps} />
           </SwiperSlide>
         ))}

@@ -36,8 +36,8 @@ const Container = styled.nav<NavbarContainerProps>`
 
         > a,
         > a:visited {
-          color: ${({ theme }) => theme.colors.gray._100};
-          opacity: 0.8 !important;
+          color: ${({ theme }) => theme.colors.gray._000};
+          opacity: 0.9 !important;
 
           span {
             opacity: 0.8 !important;
@@ -98,7 +98,7 @@ const Container = styled.nav<NavbarContainerProps>`
         ${({ theme }) => {
           const { speed, transitions } = theme.animations;
           return css`
-            transition: all ${speed._200} ${transitions.basic};
+            transition: all ${speed._100} ${transitions.basic};
           `;
         }}
 

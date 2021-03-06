@@ -1,4 +1,7 @@
 interface FeatureBoxProps {
-  title: string;
+  finalValue: number;
+  animationTotalTime?: number;
+  actionsFrequency?: number;
   content: string;
+  hasPlus?: boolean;
 }

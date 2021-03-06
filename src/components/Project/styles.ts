@@ -46,4 +46,6 @@ export const Container = styled.div`
 
 export const Title = styled(H7)``;
 
-export const SubTitle = styled(P)``;
+export const SubTitle = styled(P)`
+  color: ${({ theme }) => theme.colors.primary._200};
+`;

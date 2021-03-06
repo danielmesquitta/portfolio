@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.gray._100};
   }
 
-  body, input, button, a, a:visited {
+  body, input, textarea, button, a, a:visited {
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.typography.family};
     color: ${({ theme }) => theme.colors.gray._400};

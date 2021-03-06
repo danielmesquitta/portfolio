@@ -2,7 +2,7 @@ import 'swiper/swiper-bundle.min.css';
 
 import React, { useEffect, useRef } from 'react';
 
-import { Hero, Portfolio, Skills, About } from '~/views';
+import { Hero, Portfolio, Skills, About, Testimonials, Contact } from '~/views';
 import { Navbar } from '~/layouts';
 import { useScrollState } from '~/hooks';
 
@@ -11,25 +11,28 @@ const Home = () => {
   const skillsRef = useRef<HTMLElement>();
   const portfolioRef = useRef<HTMLElement>();
   const aboutRef = useRef<HTMLElement>();
+  const testimonialsRef = useRef<HTMLElement>();
 
   const { setCurrentSection } = useScrollState();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      const scrolled =
+      const scroll =
         document.body.scrollTop || document.documentElement.scrollTop;
       const heroSectionHeight = heroRef?.current?.clientHeight;
-      if (scrolled < heroSectionHeight) return setCurrentSection(1);
+      if (scroll < heroSectionHeight - 100) return setCurrentSection(1);
       const skillsSectionHeight =
         heroSectionHeight + skillsRef?.current?.clientHeight;
       const portfolioSectionHeight =
         skillsSectionHeight + portfolioRef?.current?.clientHeight;
       const aboutSectionHeight =
-        portfolioSectionHeight + aboutRef?.current?.clientHeight;
-      if (scrolled >= aboutSectionHeight - 100) return setCurrentSection(5);
-      if (scrolled >= portfolioSectionHeight - 100) return setCurrentSection(4);
-      if (scrolled >= skillsSectionHeight - 100) return setCurrentSection(3);
-      if (scrolled >= heroSectionHeight - 100) return setCurrentSection(2);
+        portfolioSectionHeight +
+        aboutRef?.current?.clientHeight +
+        testimonialsRef?.current?.clientHeight;
+      if (scroll >= aboutSectionHeight - 100) return setCurrentSection(5);
+      if (scroll >= portfolioSectionHeight - 100) return setCurrentSection(4);
+      if (scroll >= skillsSectionHeight - 100) return setCurrentSection(3);
+      if (scroll >= heroSectionHeight - 100) return setCurrentSection(2);
     });
     return window.removeEventListener('scroll', () => {});
   }, []);
@@ -41,6 +44,8 @@ const Home = () => {
       <Skills ref={skillsRef} />
       <Portfolio ref={portfolioRef} />
       <About ref={aboutRef} />
+      <Testimonials ref={testimonialsRef} />
+      <Contact />
     </>
   );
 };
