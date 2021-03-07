@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export default styled.section`
+const Container = styled.section`
   display: grid;
   grid-template-columns: ${({ theme }) => theme.grid.wrapper};
 `;
+
+export default Container;

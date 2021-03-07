@@ -1,12 +1,11 @@
+import React, { useEffect, useRef } from 'react';
 import 'swiper/swiper-bundle.min.css';
 
-import React, { useEffect, useRef } from 'react';
-
-import { Hero, Portfolio, Skills, About, Testimonials, Contact } from '~/views';
-import { Navbar } from '~/layouts';
 import { useScrollState } from '~/hooks';
+import { Navbar } from '~/layouts';
+import { Hero, Portfolio, Skills, About, Testimonials, Contact } from '~/views';
 
-const Home = () => {
+const Home: React.FC = () => {
   const heroRef = useRef<HTMLElement>();
   const skillsRef = useRef<HTMLElement>();
   const portfolioRef = useRef<HTMLElement>();
@@ -33,9 +32,10 @@ const Home = () => {
       if (scroll >= portfolioSectionHeight - 100) return setCurrentSection(4);
       if (scroll >= skillsSectionHeight - 100) return setCurrentSection(3);
       if (scroll >= heroSectionHeight - 100) return setCurrentSection(2);
+      return null;
     });
-    return window.removeEventListener('scroll', () => {});
-  }, []);
+    return window.removeEventListener('scroll', () => null);
+  }, [setCurrentSection]);
 
   return (
     <>

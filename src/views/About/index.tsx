@@ -1,29 +1,23 @@
 import React, { forwardRef } from 'react';
 import { FiDownload } from 'react-icons/fi';
 
-import Dots from '../../assets/dots.svg';
-
-import { Heading, P } from '~/layouts';
 import { Button, FeatureBox } from '~/components';
+import { Heading, P } from '~/layouts';
 
-import { Section, Grid } from './styles';
+import Dots from '../../assets/dots.svg';
 import data from './data';
+import { Section, Grid } from './styles';
 
 const About = forwardRef<HTMLElement, any>((props, ref) => (
   <Section {...props} ref={ref}>
     <Grid>
       <Heading id="about" title="Sobre mim" subTitle="Quem sou eu?" />
-      <P>{data}</P>
-      <img src="/about.png" />
-      <Button
-        appearance="primary"
-        children={
-          <>
-            Baixar currículo
-            <FiDownload />
-          </>
-        }
-      />
+      <P dangerouslySetInnerHTML={data} />
+      <img src="/about.png" alt="Programador refletindo" />
+      <Button appearance="primary">
+        Baixar currículo
+        <FiDownload />
+      </Button>
       <FeatureBox finalValue={2} hasPlus content="anos programando" />
       <FeatureBox
         finalValue={1000}

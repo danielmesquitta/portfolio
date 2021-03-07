@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div<SocialLinkProps>`
+const Container = styled.div<SocialLinkProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,3 +55,5 @@ export const Container = styled.div<SocialLinkProps>`
     }
   }
 `;
+
+export default Container;

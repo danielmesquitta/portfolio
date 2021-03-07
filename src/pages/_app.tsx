@@ -1,24 +1,13 @@
-import { AppProps } from 'next/app';
+import React from 'react';
 import { Helmet } from 'react-helmet';
+
+import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
-import {
-  GlobalStyle,
-  animations,
-  breakpoints,
-  colors,
-  grid,
-  typography,
-} from '~/styles';
 import { ScrollStateProvider } from '~/hooks';
+import * as theme from '~/styles';
 
-const theme = {
-  animations,
-  breakpoints,
-  colors,
-  grid,
-  typography,
-};
+const { GlobalStyle } = theme;
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>

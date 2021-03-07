@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, PropsWithChildren } from 'react';
 
 import Container from './styles';
 
-const Section = forwardRef<HTMLElement, any>(({ children, ...rest }, ref) => (
+const Section = forwardRef<HTMLElement>(({ children, ...rest }, ref) => (
   <Container {...rest} {...{ ref }}>
     {children}
   </Container>

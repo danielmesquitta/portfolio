@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useScrollState } from '~/hooks';
 
 import Container from './styles';
@@ -7,7 +8,7 @@ const Navbar: React.FC = (props) => {
   const { currentSection } = useScrollState();
 
   return (
-    <Container currentSection={currentSection}>
+    <Container currentSection={currentSection} {...props}>
       <div>
         <a href="#home">
           <strong>daniel</strong>

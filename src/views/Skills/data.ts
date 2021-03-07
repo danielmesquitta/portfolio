@@ -2,7 +2,6 @@ import {
   FiDatabase,
   FiGlobe,
   FiSmartphone,
-  FiUsers,
   FiPenTool,
   FiWind,
 } from 'react-icons/fi';

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { H3, H4 } from '~/layouts';
+
 import Container from './styles';
 
 const Heading: React.FC<HeadingProps> = ({

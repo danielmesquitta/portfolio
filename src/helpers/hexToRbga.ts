@@ -1,4 +1,4 @@
-export default (hex: string, opacity: number) => {
+export default (hex: string, opacity: number): string => {
   switch (opacity) {
     case 1:
       return `${hex}FF`;

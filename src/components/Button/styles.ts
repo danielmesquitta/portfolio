@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.button<ButtonProps>`
+const Container = styled.button<ButtonProps>`
   &,
   &:visited {
     padding: ${({ size }) =>
@@ -101,3 +101,5 @@ export const Container = styled.button<ButtonProps>`
           `}
   }
 `;
+
+export default Container;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Container as FeatureBox } from '~/components/FeatureBox/styles';
 
+import { Container as FeatureBox } from '~/components/FeatureBox/styles';
 import { Section as SectionLayout, Grid as GridLayout } from '~/layouts';
 
 export const Section = styled(SectionLayout)`

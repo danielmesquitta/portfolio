@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
       theme.breakpoints.lg}) { // width < 1280
       font-size: 56.25%; //1 rem = 9px
     }
-    
+
     @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.sm}) { // width < 768
         font-size: 50%; //1 rem = 8px

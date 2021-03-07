@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useContext, useState } from 'react';
 
 const ScrollStateContext = createContext<ScrollStateContext>(null);
 
-export const ScrollStateProvider = ({ children }) => {
+export const ScrollStateProvider: React.FC = ({ children }) => {
   const [currentSection, setCurrentSection] = useState(1);
 
   const getScrollPosition = useCallback(
@@ -19,9 +19,10 @@ export const ScrollStateProvider = ({ children }) => {
       let elem = elementRef;
       let position = 0;
       do {
-        if (!isNaN(elem?.[offset])) {
+        if (typeof elem?.[offset] !== 'number') {
           position += elem?.[offset];
         }
+        // eslint-disable-next-line
       } while ((elem = elem?.offsetParent as any));
       if (fromOffset === 'top') {
         position -= window.innerHeight;
@@ -45,4 +46,5 @@ export const ScrollStateProvider = ({ children }) => {
   );
 };
 
-export const useScrollState = () => useContext(ScrollStateContext);
+export const useScrollState = (): ScrollStateContext =>
+  useContext(ScrollStateContext);

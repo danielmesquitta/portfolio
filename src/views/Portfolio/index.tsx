@@ -5,14 +5,14 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import { FiGithub } from 'react-icons/fi';
 
 import { Button, Project } from '~/components';
+import { useScrollState } from '~/hooks';
 import { Heading } from '~/layouts';
 
-import { Section, ButtonsGrid, ProjectsGrid } from './styles';
 import { categories, projects } from './data';
-import { useScrollState } from '~/hooks';
-import { FiGithub } from 'react-icons/fi';
+import { Section, ButtonsGrid, ProjectsGrid } from './styles';
 
 const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
   const portfolioRef = useRef<HTMLElement>(null);
@@ -70,9 +70,10 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
             appearance="secondary"
             outline={selectedButton !== index}
             hasHover={selectedButton !== index}
-            children={label}
             onClick={() => changeFilter(index)}
-          />
+          >
+            {label}
+          </Button>
         ))}
       </ButtonsGrid>
       <ProjectsGrid ref={portfolioRef} hasShadow={hasShadow}>
@@ -94,13 +95,11 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         as="a"
         href="https://github.com/danielmesquitta?tab=repositories"
         target="_blank"
-        children={
-          <>
-            Veja mais no meu github
-            <FiGithub />
-          </>
-        }
-      />
+        rel="noreferrer"
+      >
+        Veja mais no meu github
+        <FiGithub />
+      </Button>
     </Section>
   );
 });

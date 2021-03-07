@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import { useScrollState } from '~/hooks';
 import { P } from '~/layouts';
 
@@ -26,8 +27,8 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({
         setIsVisible(true);
       }
     });
-    return window.removeEventListener('scroll', () => {});
-  }, []);
+    return window.removeEventListener('scroll', () => null);
+  }, [getElementPosition, getScrollPosition, isVisible]);
 
   useEffect(() => {
     if (isVisible) {
@@ -45,7 +46,7 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({
     if (currentValue >= finalValue) {
       clearInterval(intervalId);
     }
-  }, [intervalId, currentValue]);
+  }, [currentValue, finalValue, intervalId]);
 
   return (
     <Container ref={ref}>

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Section as SectionLayout, Grid as GridLayout } from '~/layouts';
 

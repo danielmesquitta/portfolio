@@ -38,7 +38,7 @@ export default {
 
   fadeIn: (start = 0) => keyframes`
     0% { opacity: 0 }
-    ${start + '%'} { opacity: 0 }
+    ${`${start}%`} { opacity: 0 }
     100% { opacity: 1 }
   `,
 
@@ -48,19 +48,17 @@ export default {
   `,
 
   slideUp: (start = 0) => keyframes`
-    0% { 
-      opacity: 0; 
-      transform: translateY(100%); 
-    }
-    ${start + '%'} {
+    0% {
       opacity: 0;
       transform: translateY(100%);
     }
-    100% { 
-      opacity: 1; 
+    ${`${start}%`} {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
       transform: translateY(0%);
     }
   `,
 };
-
-// animation: 1s ${rotate360} linear infinite;

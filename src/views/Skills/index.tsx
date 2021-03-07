@@ -1,11 +1,13 @@
 import React, { forwardRef } from 'react';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Card } from '~/components';
-import { Section, Grid, Heading } from './styles';
+
 import data from './data';
-import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { Section, Grid, Heading } from './styles';
 
 SwiperCore.use([Autoplay, Navigation]);
 

@@ -1,13 +1,7 @@
-import { ThemeProps } from 'styled-components';
+import * as theme from '~/styles';
 
-import { animations, breakpoints, colors, grid, typography } from '~/styles';
+type Theme = typeof theme;
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    animations: typeof animations;
-    breakpoints: typeof breakpoints;
-    colors: typeof colors;
-    grid: typeof grid;
-    typography: typeof typography;
-  }
+  export interface DefaultTheme extends Theme
 }
