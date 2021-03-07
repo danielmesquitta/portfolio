@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({
           <SubTitle>{subTitles.join(' / ')}</SubTitle>
         </div>
         <Button appearance="primary" size="sm">
-          Learn more <FiBook />
+          Saiba mais <FiBook />
         </Button>
       </div>
     </Container>

@@ -5,7 +5,7 @@ const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.gray._200};
   border-radius: 0.4rem;
   min-height: 35rem;
-  padding: 5rem 1rem 2rem;
+  padding: 5rem 2rem 2rem;
   margin: 1px;
 
   ${({ theme }) => {
@@ -20,10 +20,11 @@ const Container = styled.div`
   }
 
   svg {
+    display: block;
     height: 6rem;
     width: 6rem;
     stroke-width: 1px;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
   }
 
   h5 {

@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { SocialLinks } from '~/layouts';
 
 import Dots from '../../assets/dots.svg';
@@ -10,9 +9,9 @@ const Hero = forwardRef<HTMLElement, any>((props, ref) => {
     <Section {...props} {...{ ref }}>
       <Grid>
         <header id="home">
-          <Title>Hello, This is Daniel</Title>
+          <Title>Olá! Sou Daniel,</Title>
           <SubTitle>
-            <hr /> Full-stack Developer
+            <hr /> Desenvolvedor Full-stack
           </SubTitle>
         </header>
         <SocialLinks as="aside" vertical />

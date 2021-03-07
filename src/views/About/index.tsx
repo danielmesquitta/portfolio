@@ -12,27 +12,28 @@ import data from './data';
 const About = forwardRef<HTMLElement, any>((props, ref) => (
   <Section {...props} ref={ref}>
     <Grid>
-      <Heading id="about" title="About me" subTitle="Who am I?" />
+      <Heading id="about" title="Sobre mim" subTitle="Quem sou eu?" />
       <P>{data}</P>
       <img src="/about.png" />
       <Button
         appearance="primary"
         children={
           <>
-            Download CV
+            Baixar currículo
             <FiDownload />
           </>
         }
       />
-      <FeatureBox finalValue={2} hasPlus content="years coding" />
+      <FeatureBox finalValue={2} hasPlus content="anos programando" />
       <FeatureBox
         finalValue={1000}
         hasPlus
-        content="Github commits in the last year"
+        content="Github commits no último ano"
       />
       <FeatureBox
-        finalValue={54}
-        content="Some other stuff I don’t know yet."
+        finalValue={4000}
+        hasPlus
+        content="Horas trabalhando com programação."
       />
     </Grid>
     <Dots />

@@ -1,29 +1,42 @@
-import { FiDatabase, FiGlobe, FiSmartphone, FiUsers } from 'react-icons/fi';
+import {
+  FiDatabase,
+  FiGlobe,
+  FiSmartphone,
+  FiUsers,
+  FiPenTool,
+  FiWind,
+} from 'react-icons/fi';
 
 const data = [
   {
     Icon: FiDatabase,
-    title: 'Back-end & infra',
+    title: 'Back-end',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+      'Experiência com Node.js, bancos relacionais e não relacionais, criação de REST-APIS, envio de e-mails com filas e muito mais.',
   },
   {
     Icon: FiGlobe,
-    title: 'Web development',
+    title: 'Web',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+      'Utilização de ferramentas modernas como React e Next para criação de sites dinâmicos, rápidos e responsivos.',
   },
   {
     Icon: FiSmartphone,
-    title: 'Mobile development',
+    title: 'Mobile',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+      'Uso do React Native para criação de aplicativos intuitivos e amigáveis ao usuário para ambas plataformas Android e IOS.',
   },
   {
-    Icon: FiUsers,
-    title: 'Communication',
+    Icon: FiWind,
+    title: 'Metodologias Ágeis',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+      'Prática de metodologias ágeis no ciclo de produção, com feedbacks e interações constantes para garantir agilidade e eficiência no processo.',
+  },
+  {
+    Icon: FiPenTool,
+    title: 'UX / UI',
+    content:
+      'Foco na experiência do usuário, onde todos os detalhes realmente importam e pensar fora da caixa apresenta-se como essencial.',
   },
 ];
 

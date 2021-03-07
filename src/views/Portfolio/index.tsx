@@ -60,8 +60,8 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
       <ButtonsGrid>
         <Heading
           id="portfolio"
-          title="Portfolio"
-          subTitle="Check out my work"
+          title="Portfólio"
+          subTitle="Veja meu trabalho"
           appearance="secondary"
         />
         {categories.map((label, index) => (
@@ -96,7 +96,7 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         target="_blank"
         children={
           <>
-            See more on github
+            Veja mais no meu github
             <FiGithub />
           </>
         }

@@ -1,5 +1,5 @@
 export const categories = [
-  'All projects',
+  'Todos os projetos',
   'Back-end',
   'Web',
   'Mobile',

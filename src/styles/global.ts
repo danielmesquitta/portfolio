@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    hyphens: auto;
     min-height: 100%;
+    hyphens: auto;
     word-wrap: break-word;
     overflow-x: hidden;
     position: relative;

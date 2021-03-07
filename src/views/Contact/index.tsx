@@ -12,15 +12,15 @@ const Contact: React.FC = () => {
         <Heading
           id="contact"
           appearance="secondary"
-          title="Contact me"
-          subTitle="Want to talk?"
+          title="Contate-me"
+          subTitle="Quer conversar?"
         />
         <div>
-          <Input name="name" placeholder="Name" />
+          <Input name="name" placeholder="Nome" />
           <Input name="email" placeholder="E-mail" />
-          <Input name="message" placeholder="Your message" type="textarea" />
+          <Input name="message" placeholder="Sua mensagem" type="textarea" />
           <Button appearance="secondary" outline>
-            Send <FiSend />
+            Enviar <FiSend />
           </Button>
         </div>
         <SocialLinks as="footer" appearance="secondary" />

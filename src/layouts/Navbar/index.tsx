@@ -15,10 +15,10 @@ const Navbar: React.FC = (props) => {
         </a>
         <div>
           <a href="#home">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact Me</a>
+          <a href="#skills">Habilidades</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#about">Sobre</a>
+          <a href="#contact">Contate-me</a>
         </div>
       </div>
     </Container>

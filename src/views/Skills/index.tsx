@@ -14,12 +14,12 @@ const Skills = forwardRef<HTMLElement, any>((props, ref) => (
     <Grid>
       <Heading
         id="skills"
-        title="Skills"
+        title="Habilidades"
         subTitle={
           <>
-            Making the complex
+            Transformando complexo
             <br />
-            simple
+            em simples
           </>
         }
       />
