@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import 'swiper/swiper-bundle.min.css';
 
+import 'swiper/swiper-bundle.min.css';
 import { useScrollState } from '~/hooks';
 import { Navbar } from '~/layouts';
 import { Hero, Portfolio, Skills, About, Testimonials, Contact } from '~/views';

@@ -4,3 +4,8 @@ interface CircleProps {
   left?: string;
   right?: string;
 }
+
+interface TitleProps {
+  textLength: number;
+  elWidth: number;
+}

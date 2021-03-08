@@ -1,4 +1,6 @@
-import * as theme from '~/styles';
+import * as styles from '~/styles';
+
+const { GlobalStyle, ...theme } = styles;
 
 type Theme = typeof theme;
 

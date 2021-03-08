@@ -7,3 +7,5 @@ export { default as FeatureBox } from './FeatureBox';
 export { default as Project } from './Project';
 
 export { default as Input } from './Input';
+
+export { default as TextArea } from './TextArea';

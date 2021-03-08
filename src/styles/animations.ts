@@ -31,15 +31,13 @@ export default {
   `,
 
   breathing: keyframes`
-    0% { transform: scale(0.96) }
+    0%, 100% { transform: scale(0.96) }
     50% { transform: scale(1) }
-    100% { transform: scale(0.96) }
   `,
 
-  fadeIn: (start = 0) => keyframes`
-    0% { opacity: 0 }
-    ${`${start}%`} { opacity: 0 }
-    100% { opacity: 1 }
+  fadeIn: (start = 0, initialScale = 0) => keyframes`
+    0%, ${start}% { opacity: 0; transform: scale(${initialScale}) }
+    100% { opacity: 1; transform: scale(1) }
   `,
 
   slideDown: keyframes`
@@ -48,11 +46,7 @@ export default {
   `,
 
   slideUp: (start = 0) => keyframes`
-    0% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    ${`${start}%`} {
+    0%, ${start}% {
       opacity: 0;
       transform: translateY(100%);
     }
@@ -60,5 +54,15 @@ export default {
       opacity: 1;
       transform: translateY(0%);
     }
+  `,
+
+  blinkCursor: keyframes`
+    0%, 75% { opacity: 1 }
+    76%, 100% { opacity: 0 }
+  `,
+
+  typing: (width = '100%') => keyframes`
+    0% { width: 0 }
+    100% { width: ${width} }
   `,
 };

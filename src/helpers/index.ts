@@ -1,2 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-export { default as hexToRgba } from './hexToRbga';
+export { default as hexToRgba } from './hexToRgba';
+
+export { default as capitalize } from './capitalize';
+
+export { default as getLetters } from './getLetters';

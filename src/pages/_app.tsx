@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
-import { ScrollStateProvider } from '~/hooks';
-import * as theme from '~/styles';
+import { RootProvider } from '~/hooks';
+import * as styles from '~/styles';
 
-const { GlobalStyle } = theme;
+const { GlobalStyle, ...theme } = styles;
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
@@ -20,10 +20,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       />
     </Helmet>
     <ThemeProvider theme={theme}>
-      <ScrollStateProvider>
+      <RootProvider>
         <GlobalStyle />
         <Component {...pageProps} />
-      </ScrollStateProvider>
+      </RootProvider>
     </ThemeProvider>
   </>
 );

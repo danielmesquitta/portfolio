@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -47,11 +47,12 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.gray._400};
   }
 
-  button {
-    cursor: pointer;
+  input, textarea, button {
+    border: 0;
+    background-color: transparent;
   }
 
-  a, a:visited {
+  a, a:visited, button {
     text-decoration: none;
     cursor: pointer;
   }

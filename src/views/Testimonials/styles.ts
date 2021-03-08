@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { hexToRgba } from '~/helpers';
 import { Section as SectionLayout, Grid as GridLayout } from '~/layouts';
 
 export const Section = styled(SectionLayout)`
@@ -22,8 +23,8 @@ export const Section = styled(SectionLayout)`
   > div:nth-child(2) {
     background: linear-gradient(
       to bottom,
-      ${({ theme }) => `${theme.colors.gray._400}00`} 0%,
-      ${({ theme }) => `${theme.colors.gray._400}FF`} 100%
+      ${({ theme }) => hexToRgba(theme.colors.gray._400, 0)} 0%,
+      ${({ theme }) => hexToRgba(theme.colors.gray._400, 1)} 100%
     );
     z-index: 1;
   }

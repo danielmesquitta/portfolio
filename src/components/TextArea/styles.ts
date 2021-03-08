@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.input`
+const Container = styled.textarea`
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.gray._100}CC;
   color: ${({ theme }) => theme.colors.gray._400};

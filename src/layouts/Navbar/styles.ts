@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-const Container = styled.nav<NavbarContainerProps>`
-  display: grid;
-  grid-template-columns: ${({ theme }) => theme.grid.wrapper};
+import { Section } from '~/layouts';
+
+const Container = styled(Section)<NavbarContainerProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@ const Container = styled.nav<NavbarContainerProps>`
   ${({ theme }) => {
     const { fadeIn, speed, transitions } = theme.animations;
     return css`
-      animation: ${speed._200} ${fadeIn()} ${transitions.basic};
+      animation: ${speed._300} ${fadeIn(0, 1)} ${transitions.basic};
     `;
   }}
 
@@ -31,7 +31,7 @@ const Container = styled.nav<NavbarContainerProps>`
         `;
       }}
 
-      > div {
+      > nav {
         margin: 0 !important;
 
         > a,
@@ -63,7 +63,7 @@ const Container = styled.nav<NavbarContainerProps>`
       }
     `}
 
-  > div {
+  > nav {
     grid-column: 2 / 3;
     margin: 2rem 0;
     padding: 1rem 0;

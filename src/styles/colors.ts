@@ -18,4 +18,10 @@ export default {
     _400: '#001D38',
     _500: '#001426',
   },
+
+  status: {
+    error: '#D74B29',
+    success: '#00A28F',
+    warning: '#FFB900',
+  },
 };

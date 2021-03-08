@@ -6,4 +6,5 @@ interface ProjectProps extends ProjectContainerProps {
   image: string;
   title: string;
   subTitles: string[];
+  onClick: () => void;
 }

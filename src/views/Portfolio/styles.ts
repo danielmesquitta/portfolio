@@ -27,9 +27,10 @@ export const ButtonsGrid = styled(LayoutGrid)`
   }
 `;
 
-export const ProjectsGrid = styled(LayoutGrid)`
+export const ProjectsGrid = styled.div`
   margin: 3rem 0 0;
+  display: grid;
+  grid-column: 2 / 3;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
   border-radius: 0.4rem;
 `;

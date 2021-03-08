@@ -4,17 +4,17 @@ import { useField } from '@unform/core';
 
 import Container from './styles';
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ name, ...rest }, ref) => {
-    const inputRef = useRef<HTMLInputElement>(null);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
     const { registerField } = useField(name);
 
     useEffect(() => {
-      registerField({ name, ref: inputRef.current, path: 'value' });
+      registerField({ name, ref: textareaRef?.current, path: 'value' });
     }, [name, registerField]);
 
-    return <Container {...rest} ref={inputRef} />;
+    return <Container {...rest} ref={textareaRef} />;
   }
 );
 
-export default Input;
+export default TextArea;

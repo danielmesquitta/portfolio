@@ -27,13 +27,13 @@ export const Grid = styled(GridLayout)`
     const { fadeIn, speed, transitions } = theme.animations;
     return css`
       header {
-        animation: ${speed._300} ${fadeIn(15)} ${transitions.basic};
+        animation: ${speed._300} ${fadeIn(15, 0.8)} ${transitions.elastic};
       }
       aside {
         ${[1, 2, 3].map(
           (id) => css`
             a:nth-of-type(${id}) {
-              animation: ${speed._400} ${fadeIn(id * 20)} ${transitions.basic};
+              animation: ${speed._500} ${fadeIn(id * 20)} ${transitions.rubber};
             }
           `
         )}
@@ -63,6 +63,7 @@ export const Grid = styled(GridLayout)`
 export const Title = styled(H1)`
   color: ${({ theme }) => theme.colors.gray._000};
   margin-bottom: 2rem;
+  position: relative;
 `;
 
 export const SubTitle = styled(H2)`

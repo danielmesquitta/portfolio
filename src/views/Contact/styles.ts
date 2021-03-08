@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { Section as SectionLayout, Grid as GridLayout } from '~/layouts';
 
 export const Section = styled(SectionLayout)`
-  padding-top: 6rem;
+  padding-top: 3rem;
   background-color: ${({ theme }) => theme.colors.gray._400};
 `;
 
 export const Grid = styled(GridLayout)`
-  > div:nth-child(2) {
+  > form {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

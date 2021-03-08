@@ -44,7 +44,7 @@ export const Container = styled.div<ProjectContainerProps>`
 
   > div {
     text-align: center;
-    padding: 6rem 2rem;
+    padding: 6rem 3.5rem;
     position: absolute;
     top: 0;
     bottom: 0;

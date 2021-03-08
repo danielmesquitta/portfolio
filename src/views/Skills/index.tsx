@@ -30,7 +30,7 @@ const Skills = forwardRef<HTMLElement, any>((props, ref) => (
         spaceBetween={30}
         slidesPerView={3}
         navigation={{ prevEl: '.prev', nextEl: '.next' }}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 7000 }}
       >
         {data.map((cardProps) => (
           <SwiperSlide key={cardProps.title}>

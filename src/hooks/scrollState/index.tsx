@@ -1,5 +1,7 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
 
+import { capitalize } from '~/helpers';
+
 const ScrollStateContext = createContext<ScrollStateContext>(null);
 
 export const ScrollStateProvider: React.FC = ({ children }) => {
@@ -13,17 +15,16 @@ export const ScrollStateProvider: React.FC = ({ children }) => {
 
   const getElementPosition: GetElementPosition = useCallback(
     (elementRef, fromOffset) => {
-      const offset = `offset${
-        fromOffset[0].toUpperCase() + fromOffset.substring(1)
-      }`;
+      const offset = `offset${capitalize(fromOffset)}`;
       let elem = elementRef;
       let position = 0;
       do {
-        if (typeof elem?.[offset] !== 'number') {
+        // eslint-disable-next-line
+        if (!isNaN(elem?.[offset])) {
           position += elem?.[offset];
         }
         // eslint-disable-next-line
-      } while ((elem = elem?.offsetParent as any));
+      } while ((elem = elem?.offsetParent as HTMLElement));
       if (fromOffset === 'top') {
         position -= window.innerHeight;
       }
