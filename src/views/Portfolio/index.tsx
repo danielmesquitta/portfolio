@@ -10,6 +10,7 @@ import { FiGithub } from 'react-icons/fi';
 
 import { Button, Project } from '~/components';
 import Modal from '~/components/Modal';
+import { ModalButton } from '~/components/Modal/types';
 import { useScrollState, useModalState } from '~/hooks';
 import { H7, Heading, P } from '~/layouts';
 
@@ -62,34 +63,21 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
     changeFilter(0);
   }, [changeFilter]);
 
-  const handleProjectClick = useCallback((title: string) => {
-    const index = projects.findIndex((project) => project.title === title);
-    const { content } = projects[index];
-    setData({
-      title,
-      content,
-      images: [
-        { src: `/portfolio-${index}.png`, alt: `Foto do projeto ${title}` },
-      ],
-      buttons: [
-        {
-          label: 'Ir para o site',
-          appearance: 'primary',
-          hasHover: false,
-        },
-        {
-          label: (
-            <>
-              Ver no github <FiGithub />
-            </>
-          ),
-          appearance: 'primary',
-          outline: true,
-          hasHover: false,
-        },
-      ],
-    });
-  }, []);
+  const handleProjectClick = useCallback(
+    (title: string) => {
+      const index = projects.findIndex((project) => project.title === title);
+      const { content, buttons } = projects[index];
+      setData({
+        title,
+        content,
+        images: [
+          { src: `/portfolio-${index}.png`, alt: `Foto do projeto ${title}` },
+        ],
+        buttons: buttons as ModalButton[],
+      });
+    },
+    [setData]
+  );
 
   return (
     <>

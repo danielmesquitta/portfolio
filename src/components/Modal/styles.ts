@@ -112,7 +112,8 @@ export const Container = styled.div`
     left: 0;
     padding: 2rem;
 
-    > button {
+    > button,
+    > a {
       margin-right: 2rem;
 
       &:hover {

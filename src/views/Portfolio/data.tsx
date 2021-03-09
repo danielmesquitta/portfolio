@@ -1,3 +1,5 @@
+import { FiGithub, FiFigma } from 'react-icons/fi';
+
 export const categories = [
   'Todos os projetos',
   'Back-end',
@@ -29,6 +31,21 @@ export const projects = [
         consultas.
       </>
     ),
+    buttons: [
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/doctortime',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'Trillo',
@@ -53,6 +70,31 @@ export const projects = [
         ferramentas como Sass e features modernas do CSS.
       </>
     ),
+    buttons: [
+      {
+        label: 'Ir para o site',
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://danielmesquitta.github.io/trillo/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/trillo',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'Medfy',
@@ -60,8 +102,8 @@ export const projects = [
     tags: ['Back-end', 'Web'],
     content: (
       <>
-        Um dos principais produtos da minha empresa atual, um sistema para
-        organização de hospitais.
+        Um dos principais produtos da minha empresa atual (Estúdio Flow), um
+        sistema para organização de hospitais.
         <br />
         <br />
         Nele pude participar na criação e documentação do back-end, na
@@ -69,6 +111,17 @@ export const projects = [
         animações e na responsividade do site.
       </>
     ),
+    buttons: [
+      {
+        label: 'Conhecer Estúdio Flow',
+        appearance: 'primary',
+        as: 'a',
+        href: 'http://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'ChatApp',
@@ -92,6 +145,33 @@ export const projects = [
         suas respectivas formas de manipulação.
       </>
     ),
+    buttons: [
+      {
+        label: 'Ver Protótipo',
+        appearance: 'primary',
+        as: 'a',
+        href:
+          'https://www.figma.com/proto/bSB2JoDpmZiThd4BWQx2vh/Chat-App?node-id=107%3A17&scaling=min-zoom',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            Ver Design no Figma <FiFigma />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href:
+          'https://www.figma.com/file/bSB2JoDpmZiThd4BWQx2vh/Chat-App?node-id=107%3A2',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'Nexter',
@@ -116,6 +196,31 @@ export const projects = [
         benefícios, casas disponíveis, preços, etc.
       </>
     ),
+    buttons: [
+      {
+        label: 'Ir para o site',
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://danielmesquitta.github.io/nexter/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/nexter',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'github_explorer',
@@ -134,6 +239,21 @@ export const projects = [
         Javascript.
       </>
     ),
+    buttons: [
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/githubexplorer',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'Ecoleta',
@@ -160,6 +280,21 @@ export const projects = [
         , uma famosa instituição brasileira de ensino de programação.
       </>
     ),
+    buttons: [
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/ecoleta',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'TeamApp',
@@ -182,6 +317,33 @@ export const projects = [
         onde pude aplicar diversos conhecimentos e técnicas de design.
       </>
     ),
+    buttons: [
+      {
+        label: 'Ver Protótipo',
+        appearance: 'primary',
+        as: 'a',
+        href:
+          'https://www.figma.com/proto/cg5V3NHJlgVPx8CKSzADLy/Team-App-Design?node-id=3%3A33&scaling=min-zoom',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            Ver Design no Figma <FiFigma />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href:
+          'https://www.figma.com/file/cg5V3NHJlgVPx8CKSzADLy/Team-App-Design?node-id=0%3A1',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
   {
     title: 'eCommerce',
@@ -199,5 +361,20 @@ export const projects = [
         manipulação dos Estados do React em múltiplos componentes.
       </>
     ),
+    buttons: [
+      {
+        label: (
+          <>
+            Ver no github <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/ecommerce',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
   },
 ];
