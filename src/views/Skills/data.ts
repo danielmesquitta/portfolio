@@ -11,7 +11,7 @@ const data = [
     Icon: FiDatabase,
     title: 'Back-end',
     content:
-      'Experiência com Node.js, bancos relacionais e não relacionais, criação de REST-APIS, envio de e-mails com filas e muito mais.',
+      'Experiência com Node.js, bancos relacionais e não relacionais, criação de REST-APIS, envio de e-mails com filas, linux, etc.',
   },
   {
     Icon: FiGlobe,

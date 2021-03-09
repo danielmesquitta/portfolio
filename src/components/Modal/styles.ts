@@ -31,7 +31,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.gray._100};
   max-width: 70rem;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   padding: 2rem;
   border-radius: 0.4rem;
 

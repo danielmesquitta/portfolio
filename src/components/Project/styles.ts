@@ -79,7 +79,11 @@ export const Container = styled.div<ProjectContainerProps>`
 export const Title = styled(H7)``;
 
 export const SubTitle = styled(P)`
-  color: ${({ theme }) => theme.colors.primary._200};
+  color: ${({ theme }) => hexToRgba(theme.colors.primary._100, 0.5)};
+  text-transform: uppercase;
+  font-weight: ${({ theme }) => theme.typography.weight.bold};
   margin-top: 0.5rem;
   line-height: 1.4;
+  font-size: 1.3rem;
+  letter-spacing: 0.13rem;
 `;
