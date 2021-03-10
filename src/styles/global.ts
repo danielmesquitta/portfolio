@@ -23,13 +23,11 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
-    @media screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.lg}) { // width < 1280
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
       font-size: 56.25%; //1 rem = 9px
     }
 
-    @media screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.sm}) { // width < 768
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
         font-size: 50%; //1 rem = 8px
     }
   }

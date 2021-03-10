@@ -1,4 +1,5 @@
-import React, { forwardRef } from 'react';
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { forwardRef, useState } from 'react';
 
 import { useScrollState } from '~/hooks';
 
@@ -7,8 +8,10 @@ import Container from './styles';
 const Navbar = forwardRef<HTMLElement, any>((props, ref) => {
   const { currentSection } = useScrollState();
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Container {...{ currentSection, ref }} {...props}>
+    <Container isOpen={isOpen} {...{ currentSection, ref }} {...props}>
       <nav>
         <a href="#home">
           <strong>daniel</strong>
@@ -21,6 +24,9 @@ const Navbar = forwardRef<HTMLElement, any>((props, ref) => {
           <a href="#about">Sobre</a>
           <a href="#contact">Contate-me</a>
         </div>
+        <button type="button" onClick={() => setIsOpen(!isOpen)}>
+          <div />
+        </button>
       </nav>
     </Container>
   );

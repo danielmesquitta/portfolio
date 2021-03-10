@@ -15,7 +15,6 @@ const Home: React.FC = () => {
   const { setCurrentSection } = useScrollState();
 
   useEffect(() => {
-    console.log(process.env.mailUser);
     window.addEventListener('scroll', () => {
       const scroll =
         document.body.scrollTop || document.documentElement.scrollTop;

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { hexToRgba } from '~/helpers';
 import {
   Section as SectionLayout,
   Grid as GridLayout,
@@ -10,11 +11,7 @@ import {
 
 export const Section = styled(SectionLayout)`
   min-height: 100vh;
-  background: linear-gradient(
-    107.15deg,
-    ${({ theme }) => theme.colors.primary._200} 0%,
-    ${({ theme }) => theme.colors.secondary._300} 100%
-  );
+  background: url('banner.png');
   position: relative;
   overflow: hidden;
 `;
@@ -27,7 +24,7 @@ export const Grid = styled(GridLayout)`
     const { fadeIn, speed, transitions } = theme.animations;
     return css`
       header {
-        animation: ${speed._300} ${fadeIn(15, 0.8)} ${transitions.elastic};
+        animation: ${speed._300} ${fadeIn(15, 1)} ${transitions.elastic};
       }
       aside {
         ${[1, 2, 3].map(
@@ -50,6 +47,12 @@ export const Grid = styled(GridLayout)`
     align-items: center;
     justify-content: center;
     height: 100vh;
+
+    h1,
+    h2 {
+      text-shadow: 0px 1.5rem 3.5rem
+        ${({ theme }) => hexToRgba(theme.colors.gray._400, 0.5)};
+    }
   }
 
   > svg:last-of-type {
@@ -85,8 +88,10 @@ export const Circle = styled(CircleLayout)`
   left: ${({ left }) => left};
   right: ${({ right }) => right};
   top: ${({ top }) => top};
-  background-color: ${({ theme }) => theme.colors.secondary._100}0D;
-  box-shadow: 0px 1.5rem 3.5rem ${({ theme }) => theme.colors.gray._400}1A;
+  background-color: ${({ theme }) =>
+    hexToRgba(theme.colors.secondary._100, 0.05)};
+  box-shadow: 0px 1.5rem 3.5rem
+    ${({ theme }) => hexToRgba(theme.colors.gray._400, 0.1)};
 
   ${({ theme }) => {
     const { breathing, transitions } = theme.animations;
@@ -94,4 +99,8 @@ export const Circle = styled(CircleLayout)`
       animation: 5s ${breathing} ${transitions.basic} infinite;
     `;
   }}
+
+  &:nth-child(2) {
+    background-color: ${hexToRgba('#5948d9', 0.6)};
+  }
 `;

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { hexToRgba } from '~/helpers';
 import { Section } from '~/layouts';
 
 const Container = styled(Section)<NavbarContainerProps>`
@@ -20,7 +21,8 @@ const Container = styled(Section)<NavbarContainerProps>`
   ${({ currentSection }) =>
     currentSection > 1 &&
     css`
-      box-shadow: 0px 1rem 2rem ${({ theme }) => theme.colors.gray._400}0D;
+      box-shadow: 0px 1rem 2rem
+        ${({ theme }) => hexToRgba(theme.colors.gray._400, 0.05)};
       background-color: ${({ theme }) => theme.colors.gray._500};
       position: fixed;
 
@@ -120,13 +122,82 @@ const Container = styled(Section)<NavbarContainerProps>`
           opacity: 1;
           padding: 1.2rem 2rem;
           border-radius: 0.4rem;
-          background-color: ${({ theme }) => theme.colors.gray._000}12;
+          background-color: ${({ theme }) =>
+            hexToRgba(theme.colors.gray._000, 0.1)};
 
           :hover {
-            background-color: ${({ theme }) => theme.colors.gray._000}24;
+            background-color: ${({ theme }) =>
+              hexToRgba(theme.colors.gray._000, 0.2)};
           }
         }
       }
+    }
+
+    > button {
+      display: none;
+
+      > div {
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+          width: 3rem;
+          height: 2px;
+          background-color: ${({ theme }) => theme.colors.gray._100};
+          display: inline-block;
+
+          ${({ theme }) => {
+            const { speed, transitions } = theme.animations;
+            return css`
+              transition: all ${speed._100} ${transitions.basic};
+            `;
+          }}
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          transition: all 0.2s;
+        }
+
+        &::before {
+          top: -0.8rem;
+        }
+        &::after {
+          top: 0.8rem;
+        }
+      }
+
+      &:hover > div {
+        &::before {
+          top: -1rem;
+        }
+        &::after {
+          top: 1rem;
+        }
+      }
+
+      ${({ isOpen }) =>
+        isOpen &&
+        css`
+          & > div,
+          &:hover > div {
+            background-color: transparent;
+
+            &::before {
+              top: 0;
+              transform: rotate(135deg);
+            }
+
+            &::after {
+              top: 0;
+              transform: rotate(-135deg);
+            }
+          }
+        `}
     }
   }
 `;
