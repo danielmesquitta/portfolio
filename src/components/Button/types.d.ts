@@ -5,4 +5,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md';
   href?: string;
   target?: '_blank';
+  as?: 'a';
+  rel?: 'noreferrer';
 }

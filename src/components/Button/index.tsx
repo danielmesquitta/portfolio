@@ -7,9 +7,10 @@ const Button: React.FC<ButtonProps> = ({
   size = 'md',
   hasHover = true,
   children,
+  as,
   ...rest
 }) => (
-  <Container {...{ appearance, size, hasHover }} {...rest}>
+  <Container as={as as any} {...{ appearance, size, hasHover }} {...rest}>
     {children}
   </Container>
 );

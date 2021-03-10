@@ -1,4 +1,5 @@
 interface SocialLinkProps {
   appearance?: 'primary' | 'secondary';
-  vertical: boolean;
+  vertical?: boolean;
+  as?: string;
 }

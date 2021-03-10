@@ -5,9 +5,10 @@ import Container from './styles';
 
 const SocialLinks: React.FC<SocialLinkProps> = ({
   appearance = 'primary',
+  as,
   ...rest
 }) => (
-  <Container {...rest} {...{ appearance }}>
+  <Container as={as as any} {...rest} {...{ appearance }}>
     <a
       href="https://github.com/danielmesquitta"
       target="_blank"

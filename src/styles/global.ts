@@ -60,6 +60,15 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  .loading {
+    ${({ theme }) => {
+      const { rotate360, speed } = theme.animations;
+      return css`
+        animation: ${speed._600} ${rotate360} infinite;
+      `;
+    }}
+  }
 `;
 
 export default GlobalStyle;

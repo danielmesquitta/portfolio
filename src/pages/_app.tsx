@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.min.css';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
@@ -21,6 +23,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
     </Helmet>
     <ThemeProvider theme={theme}>
       <RootProvider>
+        <ToastContainer />
         <GlobalStyle />
         <Component {...pageProps} />
       </RootProvider>

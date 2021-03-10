@@ -12,7 +12,7 @@ import { Button, Project } from '~/components';
 import Modal from '~/components/Modal';
 import { ModalButton } from '~/components/Modal/types';
 import { useScrollState, useModalState } from '~/hooks';
-import { H7, Heading, P } from '~/layouts';
+import { Heading } from '~/layouts';
 
 import { categories, projects } from './data';
 import { Section, ButtonsGrid, ProjectsGrid } from './styles';

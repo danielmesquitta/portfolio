@@ -1,4 +1,4 @@
-import React, { forwardRef, PropsWithChildren } from 'react';
+import React, { forwardRef } from 'react';
 
 import Container from './styles';
 
