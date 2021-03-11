@@ -107,6 +107,13 @@ const Container = styled(Section)<NavbarContainerProps>`
           background-color: ${theme.colors.gray._400};
           padding: 6rem;
 
+          ${() => {
+            const { slideLeft, speed, transitions } = theme.animations;
+            return css`
+              animation: ${speed._200} ${slideLeft} ${transitions.basic};
+            `;
+          }}
+
           &::before {
             content: '';
             position: absolute;

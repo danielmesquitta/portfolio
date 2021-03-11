@@ -60,6 +60,16 @@ export const Grid = styled(GridLayout)`
     bottom: -8rem;
     right: 20rem;
     opacity: 0.5;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+      right: 5rem;
+    }
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      opacity: 0.3;
+      left: 0;
+      right: unset;
+    }
   }
 `;
 
@@ -79,6 +89,10 @@ export const SubTitle = styled(H2)`
     border-top: 2px solid ${({ theme }) => theme.colors.gray._000};
     width: 5rem;
     margin-right: 2rem;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      width: 4rem;
+    }
   }
 `;
 

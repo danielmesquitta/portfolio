@@ -40,6 +40,7 @@ export const Container = styled.div<ProjectContainerProps>`
     right: 0;
     left: 0;
     width: 100%;
+    object-fit: center;
   }
 
   > div {

@@ -12,8 +12,9 @@ export const Section = styled(SectionLayout)`
   > div:nth-child(2),
   > img {
     grid-column: 1 / -1;
-    width: 100%;
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,6 +34,10 @@ export const Section = styled(SectionLayout)`
     top: unset;
     object-fit: cover;
     opacity: 0.6;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    min-height: 65rem;
   }
 `;
 
@@ -75,6 +80,10 @@ export const Grid = styled(GridLayout)`
         fill: ${({ theme }) => theme.colors.gray._100};
       }
     }
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+      display: none;
+    }
   }
 
   .swiper {
@@ -86,6 +95,10 @@ export const Grid = styled(GridLayout)`
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        grid-column: 1 / -1;
+      }
     }
 
     &-slide {

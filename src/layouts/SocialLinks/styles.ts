@@ -16,6 +16,17 @@ const Container = styled.div<SocialLinkProps>`
           transform: translateY(-50%);
           height: 20rem;
           flex-direction: column;
+
+          @media screen and (max-width: ${({ theme }) =>
+              theme.breakpoints.sm}) {
+            flex-direction: row;
+            top: unset;
+            right: 50%;
+            bottom: 0;
+            height: 10rem;
+            width: 20rem;
+            transform: translateX(50%);
+          }
         `
       : css`
           grid-column: 1 / -1;

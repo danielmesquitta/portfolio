@@ -23,6 +23,10 @@ export const Grid = styled(GridLayout)`
       color: ${({ theme }) => theme.colors.gray._400};
       border-radius: 0.4rem;
 
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        grid-column: 1 / -1;
+      }
+
       ::placeholder {
         color: ${({ theme }) => theme.colors.gray._400};
       }

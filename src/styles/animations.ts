@@ -56,6 +56,17 @@ export default {
     }
   `,
 
+  slideLeft: keyframes`
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  `,
+
   blinkCursor: keyframes`
     0%, 75% { opacity: 1 }
     76%, 100% { opacity: 0 }

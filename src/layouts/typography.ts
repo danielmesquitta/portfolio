@@ -3,13 +3,29 @@ import styled from 'styled-components';
 export const H1 = styled.h1`
   font-size: ${({ theme }) => theme.typography.size.h1 / 10}rem;
   line-height: 1.2;
-  letter-spacing: ${({ theme }) => (theme.typography.size.h1 / 10) * 0.05}rem; ;
+  letter-spacing: ${({ theme }) => (theme.typography.size.h1 / 10) * 0.05}rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: ${({ theme }) => ((theme.typography.size.h1 / 3) * 2) / 10}rem;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: ${({ theme }) => theme.typography.size.h1 / 2 / 10}rem;
+  }
 `;
 
 export const H2 = styled.h2`
   font-size: ${({ theme }) => theme.typography.size.h2 / 10}rem;
   line-height: 1.2;
-  letter-spacing: ${({ theme }) => (theme.typography.size.h2 / 10) * 0.05}rem; ;
+  letter-spacing: ${({ theme }) => (theme.typography.size.h2 / 10) * 0.05}rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: ${({ theme }) => ((theme.typography.size.h2 / 3) * 2) / 10}rem;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const H3 = styled.h3`
