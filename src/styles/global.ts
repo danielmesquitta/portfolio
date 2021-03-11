@@ -33,6 +33,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    overflow-x: hidden;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased !important;
