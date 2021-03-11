@@ -38,8 +38,6 @@ export const Section = styled(LayoutSection)`
 `;
 
 export const ButtonsGrid = styled(LayoutGrid)`
-  gap: 2rem;
-
   > button {
     grid-column: span 2;
 
@@ -49,6 +47,8 @@ export const ButtonsGrid = styled(LayoutGrid)`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    gap: 2rem;
+
     > button {
       grid-column: span 3;
 
@@ -59,6 +59,8 @@ export const ButtonsGrid = styled(LayoutGrid)`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    gap: 1rem;
+
     > button {
       grid-column: span 6;
 
