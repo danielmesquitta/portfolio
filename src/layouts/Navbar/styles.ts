@@ -11,13 +11,6 @@ const Container = styled(Section)<NavbarContainerProps>`
   width: 100vw;
   z-index: 10;
 
-  ${({ theme }) => {
-    const { fadeIn, speed, transitions } = theme.animations;
-    return css`
-      animation: ${speed._300} ${fadeIn(0, 1)} ${transitions.basic};
-    `;
-  }}
-
   ${({ currentSection }) =>
     currentSection > 1 &&
     css`
@@ -32,6 +25,10 @@ const Container = styled(Section)<NavbarContainerProps>`
           animation: ${speed._200} ${slideDown} ${transitions.basic};
         `;
       }}
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        padding: 2rem 0;
+      }
 
       > nav {
         margin: 0 !important;
@@ -65,6 +62,13 @@ const Container = styled(Section)<NavbarContainerProps>`
       }
     `}
 
+  ${({ theme }) => {
+    const { fadeIn, speed, transitions } = theme.animations;
+    return css`
+      animation: ${speed._300} ${fadeIn(0, 1)} ${transitions.basic};
+    `;
+  }}
+
   > nav {
     grid-column: 2 / 3;
     margin: 2rem 0;
@@ -84,11 +88,60 @@ const Container = styled(Section)<NavbarContainerProps>`
       }
     }
 
-    div {
+    > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 60rem;
+
+      ${({ theme, isOpen }) => css`
+        @media screen and (max-width: ${theme.breakpoints.md}) {
+          position: fixed;
+          height: 100vh;
+          top: 0;
+          right: 0;
+          flex-direction: column;
+          text-align: left;
+          justify-content: flex-start;
+          align-items: flex-start;
+          background-color: ${theme.colors.gray._400};
+          padding: 6rem;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20vw;
+            width: 20vw;
+            height: 100%;
+            background-color: ${hexToRgba(theme.colors.gray._400, 0.7)};
+          }
+
+          a,
+          a:visited {
+            width: 20rem;
+            margin: 2rem 0;
+            font-size: 2rem !important;
+
+            &:last-of-type {
+              &,
+              &:hover {
+                height: 6rem;
+              }
+            }
+          }
+
+          ${isOpen
+            ? css`
+                display: flex;
+                width: 80vw;
+              `
+            : css`
+                display: none;
+                width: 0;
+              `}
+        }
+      `}
 
       a,
       a:visited {
@@ -119,6 +172,9 @@ const Container = styled(Section)<NavbarContainerProps>`
         }
 
         &:last-of-type {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           opacity: 1;
           padding: 1.2rem 2rem;
           border-radius: 0.4rem;
@@ -135,6 +191,12 @@ const Container = styled(Section)<NavbarContainerProps>`
 
     > button {
       display: none;
+      height: 3rem;
+      width: 3rem;
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        display: block;
+      }
 
       > div {
         position: relative;
@@ -164,10 +226,10 @@ const Container = styled(Section)<NavbarContainerProps>`
         }
 
         &::before {
-          top: -0.8rem;
+          top: -0.9rem;
         }
         &::after {
-          top: 0.8rem;
+          top: 0.9rem;
         }
       }
 
@@ -183,6 +245,10 @@ const Container = styled(Section)<NavbarContainerProps>`
       ${({ isOpen }) =>
         isOpen &&
         css`
+          position: fixed;
+          top: 3rem;
+          right: 3rem;
+
           & > div,
           &:hover > div {
             background-color: transparent;

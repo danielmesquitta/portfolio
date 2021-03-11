@@ -17,8 +17,8 @@ const Hero = forwardRef<HTMLElement, any>((props, ref) => (
       <SocialLinks as="aside" vertical />
       <Dots />
     </Grid>
-    <Circle size={800} bottom="-12rem" left="-13rem" />
-    <Circle size={600} top="-19rem" right="-12rem" />
+    <Circle size="35vw" top="-10vw" right="-10vw" />
+    <Circle size="52vw" bottom="-10vw" left="-10vw" />
   </Section>
 ));
 

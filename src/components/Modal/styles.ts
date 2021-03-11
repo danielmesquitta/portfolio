@@ -38,7 +38,7 @@ export const Container = styled.div`
   ${({ theme }) => {
     const { speed, transitions, fadeIn } = theme.animations;
     return css`
-      animation: ${speed._200} ${fadeIn(0, 0.6)} ${transitions.rubber};
+      animation: ${speed._200} ${fadeIn(0, 0.95)} ${transitions.rubber};
 
       > button {
         transition: all ${speed._100} ${transitions.basic};

@@ -18,11 +18,21 @@ const Navbar = forwardRef<HTMLElement, any>((props, ref) => {
           <span>mesquitta</span>
         </a>
         <div>
-          <a href="#home">Home</a>
-          <a href="#skills">Habilidades</a>
-          <a href="#portfolio">Portfólio</a>
-          <a href="#about">Sobre</a>
-          <a href="#contact">Contate-me</a>
+          <a href="#home" onClick={() => setIsOpen(false)}>
+            Home
+          </a>
+          <a href="#skills" onClick={() => setIsOpen(false)}>
+            Habilidades
+          </a>
+          <a href="#portfolio" onClick={() => setIsOpen(false)}>
+            Portfólio
+          </a>
+          <a href="#about" onClick={() => setIsOpen(false)}>
+            Sobre
+          </a>
+          <a href="#contact" onClick={() => setIsOpen(false)}>
+            Contate-me
+          </a>
         </div>
         <button type="button" onClick={() => setIsOpen(!isOpen)}>
           <div />

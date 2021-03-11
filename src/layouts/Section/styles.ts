@@ -5,7 +5,7 @@ const Container = styled.section`
   grid-template-columns: 1fr 1160px 1fr;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-columns: 3rem 1fr 3rem;
   }
 `;
 

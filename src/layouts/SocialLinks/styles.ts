@@ -43,7 +43,7 @@ const Container = styled.div<SocialLinkProps>`
       svg {
         color: ${({ theme, appearance }) =>
           appearance === 'primary'
-            ? theme.colors.secondary._200
+            ? theme.colors.primary._100
             : theme.colors.gray._400};
       }
     }

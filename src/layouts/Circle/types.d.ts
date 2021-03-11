@@ -1,4 +1,4 @@
 interface CircleProps {
-  size: number;
+  size: number | string;
   color?: string;
 }

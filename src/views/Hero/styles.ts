@@ -11,7 +11,7 @@ import {
 
 export const Section = styled(SectionLayout)`
   min-height: 100vh;
-  background: url('banner.png');
+  background-image: url('banner.png');
   position: relative;
   overflow: hidden;
 `;
@@ -100,7 +100,7 @@ export const Circle = styled(CircleLayout)`
     `;
   }}
 
-  &:nth-child(2) {
-    background-color: ${hexToRgba('#5948d9', 0.6)};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    display: none;
   }
 `;
