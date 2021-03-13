@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 import { FiBook } from 'react-icons/fi';
 
 import useTranslation from 'next-translate/useTranslation';
