@@ -27,7 +27,7 @@ const Container = styled(Section)<NavbarContainerProps>`
       }}
 
       @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        padding: 2rem 0;
+        padding: 1rem 0;
       }
 
       > nav {
@@ -250,11 +250,11 @@ const Container = styled(Section)<NavbarContainerProps>`
         }
       }
 
-      ${({ isOpen }) =>
+      ${({ isOpen, currentSection }) =>
         isOpen &&
         css`
           position: fixed;
-          top: 3rem;
+          top: ${currentSection > 1 ? '2rem' : '3rem'};
           right: 3rem;
 
           & > div,

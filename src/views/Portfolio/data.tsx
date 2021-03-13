@@ -9,6 +9,82 @@ export const categories = (t: Translate) =>
 
 export const projects = (t: Translate) => [
   {
+    title: 'Akmos',
+    subTitles: ['Node', 'Sequelize', 'React', 'React Native'],
+    tags: [t`categories.1`, t`categories.3`],
+    content: (
+      <>
+        {t`projects.medfy.0`}
+        <br />
+        <br />
+        {t`projects.medfy.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'http://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/akmos.png',
+  },
+  {
+    title: 'Medfy',
+    subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
+    tags: [t`categories.1`, t`categories.2`],
+    content: (
+      <>
+        {t`projects.medfy.0`}
+        <br />
+        <br />
+        {t`projects.medfy.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'http://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/medfy.png',
+  },
+  {
+    title: 'ICTS',
+    subTitles: ['React', 'Apexcharts'],
+    tags: [t`categories.2`],
+    content: (
+      <>
+        {t`projects.medfy.0`}
+        <br />
+        <br />
+        {t`projects.medfy.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'http://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/icts.png',
+  },
+
+  {
     title: 'DoctorTime',
     subTitles: [
       'Node',
@@ -42,6 +118,7 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
+    img: '/doctorTime.png',
   },
   {
     title: 'Trillo',
@@ -88,31 +165,97 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
+    img: '/trillo.png',
   },
+
   {
-    title: 'Medfy',
-    subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
-    tags: [t`categories.1`, t`categories.2`],
+    title: 'Nexter',
+    subTitles: ['Javascript', 'Sass'],
+    tags: ['Web', 'Design'],
     content: (
       <>
-        {t`projects.medfy.0`}
+        {t`projects.nexter.0`}
         <br />
         <br />
-        {t`projects.medfy.1`}
+        {t`projects.nexter.1`}
+        <a
+          href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t`projects.nexter.2`}
+        </a>
+        {t`projects.nexter.3`}
       </>
     ),
     buttons: [
       {
-        label: t`buttons.flow`,
+        label: t`buttons.site`,
         appearance: 'primary',
         as: 'a',
-        href: 'http://estudioflow.com.br/',
+        href: 'https://danielmesquitta.github.io/nexter/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            {t`buttons.github`} <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/nexter',
         target: '_blank',
         rel: 'noreferrer',
         hasHover: false,
       },
     ],
+    img: '/nexter.png',
   },
+  {
+    title: 'Ecoleta',
+    subTitles: [
+      'Typescript',
+      'Node',
+      'SQLite',
+      'Knex',
+      'React',
+      'React Native',
+    ],
+    tags: ['Back-end', 'Web', 'Mobile'],
+    content: (
+      <>
+        {t`projects.ecoleta.0`}
+        <br />
+        <br />
+        {t`projects.ecoleta.1`}
+        <a href="https://rocketseat.com.br/" target="_blank" rel="noreferrer">
+          {t`projects.ecoleta.2`}
+        </a>
+        {t`projects.ecoleta.3`}
+      </>
+    ),
+    buttons: [
+      {
+        label: (
+          <>
+            {t`buttons.github`} <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/ecoleta',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/ecoleta.png',
+  },
+
   {
     title: 'ChatApp',
     subTitles: ['Design', 'Figma', 'Gimp'],
@@ -159,52 +302,7 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
-  },
-  {
-    title: 'Nexter',
-    subTitles: ['Javascript', 'Sass'],
-    tags: ['Web', 'Design'],
-    content: (
-      <>
-        {t`projects.nexter.0`}
-        <br />
-        <br />
-        {t`projects.nexter.1`}
-        <a
-          href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {t`projects.nexter.2`}
-        </a>
-        {t`projects.nexter.3`}
-      </>
-    ),
-    buttons: [
-      {
-        label: t`buttons.site`,
-        appearance: 'primary',
-        as: 'a',
-        href: 'https://danielmesquitta.github.io/nexter/',
-        target: '_blank',
-        rel: 'noreferrer',
-        hasHover: false,
-      },
-      {
-        label: (
-          <>
-            {t`buttons.github`} <FiGithub />
-          </>
-        ),
-        appearance: 'primary',
-        outline: true,
-        as: 'a',
-        href: 'https://github.com/danielmesquitta/nexter',
-        target: '_blank',
-        rel: 'noreferrer',
-        hasHover: false,
-      },
-    ],
+    img: '/chatApp.png',
   },
   {
     title: 'github_explorer',
@@ -233,45 +331,7 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
-  },
-  {
-    title: 'Ecoleta',
-    subTitles: [
-      'Typescript',
-      'Node',
-      'SQLite',
-      'Knex',
-      'React',
-      'React Native',
-    ],
-    tags: ['Back-end', 'Web', 'Mobile'],
-    content: (
-      <>
-        {t`projects.ecoleta.0`}
-        <br />
-        <br />
-        {t`projects.ecoleta.1`}
-        <a href="https://rocketseat.com.br/" target="_blank" rel="noreferrer">
-          {t`projects.ecoleta.2`}
-        </a>
-        {t`projects.ecoleta.3`}
-      </>
-    ),
-    buttons: [
-      {
-        label: (
-          <>
-            {t`buttons.github`} <FiGithub />
-          </>
-        ),
-        appearance: 'primary',
-        as: 'a',
-        href: 'https://github.com/danielmesquitta/ecoleta',
-        target: '_blank',
-        rel: 'noreferrer',
-        hasHover: false,
-      },
-    ],
+    img: '/github_explorer.png',
   },
   {
     title: 'TeamApp',
@@ -320,6 +380,7 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
+    img: '/teamApp.png',
   },
   {
     title: 'eCommerce',
@@ -348,5 +409,53 @@ export const projects = (t: Translate) => [
         hasHover: false,
       },
     ],
+    img: '/ecommerce.png',
+  },
+  {
+    title: 'Natours',
+    subTitles: ['Javascript', 'Sass'],
+    tags: ['Web', 'Design'],
+    content: (
+      <>
+        {t`projects.nexter.0`}
+        <br />
+        <br />
+        {t`projects.nexter.1`}
+        <a
+          href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t`projects.nexter.2`}
+        </a>
+        {t`projects.nexter.3`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.site`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://danielmesquitta.github.io/nexter/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+      {
+        label: (
+          <>
+            {t`buttons.github`} <FiGithub />
+          </>
+        ),
+        appearance: 'primary',
+        outline: true,
+        as: 'a',
+        href: 'https://github.com/danielmesquitta/nexter',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/natours.png',
   },
 ];

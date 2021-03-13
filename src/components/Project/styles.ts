@@ -12,7 +12,7 @@ export const Container = styled.div<ProjectContainerProps>`
   ${({ theme, isVisible }) => {
     const { slideUp, speed, transitions } = theme.animations;
     const gridIds = [];
-    for (let i = 1; i <= 10; i += 1) {
+    for (let i = 1; i <= 12; i += 1) {
       gridIds.push(i);
     }
     const getSlideSpeed = (id: number, selectedSpeed: string) =>
@@ -39,8 +39,9 @@ export const Container = styled.div<ProjectContainerProps>`
     bottom: 0;
     right: 0;
     left: 0;
+    height: 100%;
     width: 100%;
-    object-fit: center;
+    object-fit: cover;
   }
 
   > div {

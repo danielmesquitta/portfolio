@@ -39,7 +39,7 @@ const Testimonials = forwardRef<HTMLElement, any>((props, ref) => (
       </button>
     </Grid>
     <div />
-    <img src="/laptop-background.png" alt="Laptop como imagem de fundo" />
+    <img src="/laptop.png" alt="Laptop como imagem de fundo" />
   </Section>
 ));
 

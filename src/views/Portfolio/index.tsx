@@ -71,13 +71,11 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
   const handleProjectClick = useCallback(
     (title: string) => {
       const index = projects.findIndex((project) => project.title === title);
-      const { content, buttons } = projects[index];
+      const { content, buttons, img } = projects[index];
       setData({
         title,
         content,
-        images: [
-          { src: `/portfolio-${index}.png`, alt: `Foto do projeto ${title}` },
-        ],
+        images: [{ src: img, alt: `Foto do projeto ${title}` }],
         buttons: buttons as ModalButton[],
       });
     },
@@ -108,12 +106,12 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         </ButtonsGrid>
         <ProjectsGrid ref={portfolioRef}>
           {projects.map(
-            ({ title, subTitles, tags }, index) =>
+            ({ title, subTitles, img, tags }, index) =>
               selectedFilters.findIndex((filter) => tags?.includes(filter)) !==
                 -1 && (
                 <Project
                   key={`${title}-${selectedButton}`}
-                  image={`/portfolio-${index}.png`}
+                  image={img}
                   {...{ title, subTitles, isVisible }}
                   onClick={() => handleProjectClick(title)}
                 />
