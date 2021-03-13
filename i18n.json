@@ -2,6 +2,7 @@
   "locales": ["en", "pt"],
   "defaultLocale": "en",
   "pages": {
-    "/": ["hero", "skills", "portfolio"]
+    "*": ["components"],
+    "/": ["hero", "skills", "portfolio", "about", "contact"]
   }
 }

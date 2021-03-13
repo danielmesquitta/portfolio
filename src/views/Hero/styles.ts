@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { hexToRgba } from '~/helpers';
+import { generateArray, hexToRgba } from '~/helpers';
 import {
   Section as SectionLayout,
   Grid as GridLayout,
@@ -27,7 +27,7 @@ export const Grid = styled(GridLayout)`
         animation: ${speed._300} ${fadeIn(15, 1)} ${transitions.elastic};
       }
       aside {
-        ${[1, 2, 3].map(
+        ${generateArray(3, 1).map(
           (id) => css`
             a:nth-of-type(${id}) {
               animation: ${speed._500} ${fadeIn(id * 20)} ${transitions.rubber};

@@ -30,8 +30,7 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
   const { setData, data } = useModalState();
 
   const { t } = useTranslation('portfolio');
-  const categories = c(t);
-  const projects = p(t);
+  const [categories, projects] = useMemo(() => [c(t), p(t)], [t]);
 
   useEffect(() => {
     if (portfolioRef?.current) {
@@ -82,7 +81,7 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         buttons: buttons as ModalButton[],
       });
     },
-    [setData]
+    [projects, setData]
   );
 
   return (
@@ -91,8 +90,8 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         <ButtonsGrid>
           <Heading
             id="portfolio"
-            title="Portfólio"
-            subTitle="Conheça meu trabalho"
+            title={t`title`}
+            subTitle={t`subtitle`}
             appearance="secondary"
           />
           {categories.map((label, index) => (
@@ -129,7 +128,7 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
           target="_blank"
           rel="noreferrer"
         >
-          Veja mais no meu github
+          {t`buttons.more`}
           <FiGithub />
         </Button>
       </Section>

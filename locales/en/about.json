@@ -1,0 +1,15 @@
+{
+  "title": "Sobre mim",
+  "subtitle": "Quem sou eu?",
+  "content": [
+    "Desenvolvedor full-stack preparado pra uma jornada de aprendizado incessante. Apaixonado por tecnologia, programação e principalmente, evolução e crescimento diário.",
+    "Atualmente cursando Sistemas de Informação na Faculdade Pitágoras de Uberlândia e trabalhando na empresa Estúdio Flow em variados projetos, sendo a stack React, React Native, Node e Typescript minha principal nesse ambiente."
+  ],
+  "img": "Programador refletindo",
+  "button": "Baixar currículo",
+  "features": [
+    "Anos programando",
+    "Commits no último ano",
+    "Repositórios que participei"
+  ]
+}

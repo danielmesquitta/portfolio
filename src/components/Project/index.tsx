@@ -1,5 +1,7 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { FiBook } from 'react-icons/fi';
+
+import useTranslation from 'next-translate/useTranslation';
 
 import Button from '~/components/Button';
 import { useModalState } from '~/hooks';
@@ -13,6 +15,13 @@ const Project: React.FC<ProjectProps> = ({
   isVisible,
   onClick,
 }) => {
+  const { t: translation } = useTranslation('components');
+
+  const t = useCallback(
+    (query: TemplateStringsArray | string) => translation(`project.${query}`),
+    [translation]
+  );
+
   const { setIsVisible } = useModalState();
 
   const handleModal = useCallback(() => {
@@ -29,7 +38,7 @@ const Project: React.FC<ProjectProps> = ({
           <SubTitle>{subTitles.join(' / ')}</SubTitle>
         </div>
         <Button appearance="primary" size="sm" onClick={handleModal}>
-          Saiba mais <FiBook />
+          {t`button`} <FiBook />
         </Button>
       </div>
     </Container>

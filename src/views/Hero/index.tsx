@@ -14,9 +14,9 @@ const Hero = forwardRef<HTMLElement, any>((props, ref) => {
     <Section {...props} {...{ ref }}>
       <Grid>
         <header id="home">
-          <Title>{t('title')}</Title>
+          <Title>{t`title`}</Title>
           <SubTitle>
-            <hr /> {t('subtitle')}
+            <hr /> {t`subtitle`}
           </SubTitle>
         </header>
         <SocialLinks as="aside" vertical />

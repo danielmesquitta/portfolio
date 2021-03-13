@@ -2,8 +2,10 @@ import { FiGithub, FiFigma } from 'react-icons/fi';
 
 import { Translate } from 'next-translate';
 
+import generateArray from '~/helpers/generateArray';
+
 export const categories = (t: Translate) =>
-  [0, 1, 2, 3, 4].map((id) => t(`categories.${id}`));
+  generateArray(5).map((id) => t(`categories.${id}`));
 
 export const projects = (t: Translate) => [
   {
@@ -16,20 +18,20 @@ export const projects = (t: Translate) => [
       'React',
       'React Native',
     ],
-    tags: [t('categories.1'), t('categories.2'), t('categories.3')],
+    tags: [t`categories.1`, t`categories.2`, t`categories.3`],
     content: (
       <>
-        {t('projects.doctorTime.content.0')}
+        {t`projects.doctorTime.0`}
         <br />
         <br />
-        {t('projects.doctorTime.content.1')}
+        {t`projects.doctorTime.1`}
       </>
     ),
     buttons: [
       {
         label: (
           <>
-            {t('buttons.github')} <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -44,26 +46,26 @@ export const projects = (t: Translate) => [
   {
     title: 'Trillo',
     subTitles: ['Javascript', 'Sass'],
-    tags: [t('categories.2'), t('categories.4')],
+    tags: [t`categories.2`, t`categories.4`],
     content: (
       <>
-        {t('projects.trillo.content.0')}
+        {t`projects.trillo.0`}
         <br />
         <br />
-        {t('projects.trillo.content.1')}
+        {t`projects.trillo.1`}
         <a
           href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
           target="_blank"
           rel="noreferrer"
         >
-          {t('projects.trillo.content.2')}
+          {t`projects.trillo.2`}
         </a>
-        {t('projects.trillo.content.3')}
+        {t`projects.trillo.3`}
       </>
     ),
     buttons: [
       {
-        label: t('buttons.site'),
+        label: t`buttons.site`,
         appearance: 'primary',
         as: 'a',
         href: 'https://danielmesquitta.github.io/trillo/',
@@ -74,7 +76,7 @@ export const projects = (t: Translate) => [
       {
         label: (
           <>
-            {t('buttons.github')} <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -90,18 +92,18 @@ export const projects = (t: Translate) => [
   {
     title: 'Medfy',
     subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
-    tags: [t('categories.1'), t('categories.2')],
+    tags: [t`categories.1`, t`categories.2`],
     content: (
       <>
-        {t('projects.medfy.content.0')}
+        {t`projects.medfy.0`}
         <br />
         <br />
-        {t('projects.medfy.content.1')}
+        {t`projects.medfy.1`}
       </>
     ),
     buttons: [
       {
-        label: t('buttons.flow'),
+        label: t`buttons.flow`,
         appearance: 'primary',
         as: 'a',
         href: 'http://estudioflow.com.br/',
@@ -117,22 +119,22 @@ export const projects = (t: Translate) => [
     tags: ['Design'],
     content: (
       <>
-        {t('projects.chatApp.content.0')}
+        {t`projects.chatApp.0`}
         <a
           href="https://www.udemy.com/course/freelance-web-design-from-design-to-development-to-making-money/"
           target="_blank"
           rel="noreferrer"
         >
-          {t('projects.chatApp.content.1')}
+          {t`projects.chatApp.1`}
         </a>
         <br />
         <br />
-        {t('projects.chatApp.content.2')}
+        {t`projects.chatApp.2`}
       </>
     ),
     buttons: [
       {
-        label: 'Ver Protótipo',
+        label: t`buttons.prototype`,
         appearance: 'primary',
         as: 'a',
         href:
@@ -144,7 +146,7 @@ export const projects = (t: Translate) => [
       {
         label: (
           <>
-            Ver Design <FiFigma />
+            {t`buttons.figma`} <FiFigma />
           </>
         ),
         appearance: 'primary',
@@ -164,26 +166,23 @@ export const projects = (t: Translate) => [
     tags: ['Web', 'Design'],
     content: (
       <>
-        O meu primeiro contato com técnicas de estilização de sites utilização
-        ferramentas do CSS3 como o display grid.
+        {t`projects.nexter.0`}
         <br />
         <br />
-        Aqui, no curso{' '}
+        {t`projects.nexter.1`}
         <a
           href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
           target="_blank"
           rel="noreferrer"
         >
-          Advanced CSS and Sass
-        </a>{' '}
-        construí esse projeto de portfólio para uma falsa companhia imobiliária
-        que precisava apresentar uma boa estratégia de marketing, mostrando seus
-        benefícios, casas disponíveis, preços, etc.
+          {t`projects.nexter.2`}
+        </a>
+        {t`projects.nexter.3`}
       </>
     ),
     buttons: [
       {
-        label: 'Ir para o site',
+        label: t`buttons.site`,
         appearance: 'primary',
         as: 'a',
         href: 'https://danielmesquitta.github.io/nexter/',
@@ -194,7 +193,7 @@ export const projects = (t: Translate) => [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -213,22 +212,17 @@ export const projects = (t: Translate) => [
     tags: ['Web', 'Mobile'],
     content: (
       <>
-        O meu primeiro contato com Typescript em um projeto feito para
-        plataformas Web e Mobile com React e React Native, sendo este um
-        agregador de repositórios desenvolvido utilizando a própria API do
-        github.
+        {t`projects.github_explorer.0`}
         <br />
         <br />
-        Aqui pude experimentar as vantagens do Typescript, uma linguagem que
-        mesmo oferecendo uma tipagem mais forte não perde o dinamismo dado pelo
-        Javascript.
+        {t`projects.github_explorer.1`}
       </>
     ),
     buttons: [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -253,23 +247,21 @@ export const projects = (t: Translate) => [
     tags: ['Back-end', 'Web', 'Mobile'],
     content: (
       <>
-        Aplicação com Back-end, Front-end e Mobile, oferecendo um serviço de
-        cadastros e visualização de locais de coleta seletiva, com integração a
-        mapas e uma bela interface.
+        {t`projects.ecoleta.0`}
         <br />
         <br />
-        Projeto desenvolvido durante a Next Level Week, evento feito pela{' '}
+        {t`projects.ecoleta.1`}
         <a href="https://rocketseat.com.br/" target="_blank" rel="noreferrer">
-          Rocketseat
+          {t`projects.ecoleta.2`}
         </a>
-        , uma famosa instituição brasileira de ensino de programação.
+        {t`projects.ecoleta.3`}
       </>
     ),
     buttons: [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -287,24 +279,23 @@ export const projects = (t: Translate) => [
     tags: ['Design'],
     content: (
       <>
-        Design da Landing Page de um falso produto que seria similar a
-        plataformas como o Teams da Microsoft.
+        {t`projects.teamApp.0`}
         <br />
         <br />
-        Criado durante o curso{' '}
+        {t`projects.teamApp.1`}
         <a
           href="https://www.udemy.com/course/freelance-web-design-from-design-to-development-to-making-money/"
           target="_blank"
           rel="noreferrer"
         >
-          Complete Web Design: from Figma to Webflow to Freelancing
-        </a>{' '}
-        onde pude aplicar diversos conhecimentos e técnicas de design.
+          {t`projects.teamApp.2`}
+        </a>
+        {t`projects.teamApp.3`}
       </>
     ),
     buttons: [
       {
-        label: 'Ver Protótipo',
+        label: t`buttons.prototype`,
         appearance: 'primary',
         as: 'a',
         href:
@@ -316,7 +307,7 @@ export const projects = (t: Translate) => [
       {
         label: (
           <>
-            Ver Design <FiFigma />
+            {t`buttons.figma`} <FiFigma />
           </>
         ),
         appearance: 'primary',
@@ -336,21 +327,17 @@ export const projects = (t: Translate) => [
     tags: ['Web', 'Mobile'],
     content: (
       <>
-        Projeto pessoal nas plataforma Web e Mobile que simula um e-commerce de
-        tênis, com funcionalidade de adicionar itens à lista, cálculo do preço
-        total e todas estas funcionalidades básicas esperadas em um sistema de
-        comércio online.
+        {t`projects.eCommerce.0`}
         <br />
         <br />
-        Este teve o principal objetivo de me ensinar a utilizar o Redux para
-        manipulação dos Estados do React em múltiplos componentes.
+        {t`projects.eCommerce.1`}
       </>
     ),
     buttons: [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t`buttons.github`} <FiGithub />
           </>
         ),
         appearance: 'primary',
