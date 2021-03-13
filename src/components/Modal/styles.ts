@@ -76,6 +76,10 @@ export const Container = styled.div`
     object-fit: cover;
     height: 40vh;
     border-radius: 4px;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      height: 25vh;
+    }
   }
 
   > hr {
@@ -111,10 +115,14 @@ export const Container = styled.div`
     bottom: 0;
     left: 0;
     padding: 2rem;
+    background-color: ${({ theme }) => theme.colors.gray._100};
 
     > button,
     > a {
       margin-right: 2rem;
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      }
 
       &:hover {
         transform: scale(1.05);

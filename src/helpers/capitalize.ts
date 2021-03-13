@@ -1,1 +1,4 @@
-export default (str: string): string => str[0].toUpperCase() + str.substring(1);
+const capitalize = (str: string): string =>
+  str[0].toUpperCase() + str.substring(1);
+
+export default capitalize;

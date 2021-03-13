@@ -1,14 +1,11 @@
 import { FiGithub, FiFigma } from 'react-icons/fi';
 
-export const categories = [
-  'Todos os projetos',
-  'Back-end',
-  'Web',
-  'Mobile',
-  'Design',
-];
+import { Translate } from 'next-translate';
 
-export const projects = [
+export const categories = (t: Translate) =>
+  [0, 1, 2, 3, 4].map((id) => t(`categories.${id}`));
+
+export const projects = (t: Translate) => [
   {
     title: 'DoctorTime',
     subTitles: [
@@ -19,23 +16,20 @@ export const projects = [
       'React',
       'React Native',
     ],
-    tags: ['Back-end', 'Web', 'Mobile'],
+    tags: [t('categories.1'), t('categories.2'), t('categories.3')],
     content: (
       <>
-        Este foi meu primeiro projeto pessoal verdadeiramente full-stack, com
-        uma REST API, versão WEB e MOBILE.
+        {t('projects.doctorTime.content.0')}
         <br />
         <br />
-        Ele consiste basicamente em um sistema de agendamento de consultas
-        médicas, onde pacientes e doutores podem se cadastrar e agendar
-        consultas.
+        {t('projects.doctorTime.content.1')}
       </>
     ),
     buttons: [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t('buttons.github')} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -50,29 +44,26 @@ export const projects = [
   {
     title: 'Trillo',
     subTitles: ['Javascript', 'Sass'],
-    tags: ['Web', 'Design'],
+    tags: [t('categories.2'), t('categories.4')],
     content: (
       <>
-        Esse é um site apenas como uma página que tem o intúito de ser uma
-        plataforma que resolveria em apenas um lugar, todos os problemas de uma
-        pessoa em seu período de escolha e preparo para uma viagem.
+        {t('projects.trillo.content.0')}
         <br />
         <br />
-        Desenvolvido durante o bootcamp{' '}
+        {t('projects.trillo.content.1')}
         <a
           href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
           target="_blank"
           rel="noreferrer"
         >
-          Advanced CSS and Sass
+          {t('projects.trillo.content.2')}
         </a>
-        , aperfeiçoou meus conhecimentos na estilização de sites utilizando
-        ferramentas como Sass e features modernas do CSS.
+        {t('projects.trillo.content.3')}
       </>
     ),
     buttons: [
       {
-        label: 'Ir para o site',
+        label: t('buttons.site'),
         appearance: 'primary',
         as: 'a',
         href: 'https://danielmesquitta.github.io/trillo/',
@@ -83,7 +74,7 @@ export const projects = [
       {
         label: (
           <>
-            Ver no github <FiGithub />
+            {t('buttons.github')} <FiGithub />
           </>
         ),
         appearance: 'primary',
@@ -99,21 +90,18 @@ export const projects = [
   {
     title: 'Medfy',
     subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
-    tags: ['Back-end', 'Web'],
+    tags: [t('categories.1'), t('categories.2')],
     content: (
       <>
-        Um dos principais produtos da minha empresa atual (Estúdio Flow), um
-        sistema para organização de hospitais.
+        {t('projects.medfy.content.0')}
         <br />
         <br />
-        Nele pude participar na criação e documentação do back-end, na
-        integração entre o front-end e o back-end, na criação de componentes,
-        animações e na responsividade do site.
+        {t('projects.medfy.content.1')}
       </>
     ),
     buttons: [
       {
-        label: 'Conhecer Estúdio Flow',
+        label: t('buttons.flow'),
         appearance: 'primary',
         as: 'a',
         href: 'http://estudioflow.com.br/',
@@ -129,20 +117,17 @@ export const projects = [
     tags: ['Design'],
     content: (
       <>
-        O meu primeiro contato com design fora da empresa que atualmente
-        trabalho. Este projeto foi desenvolvido durante o curso{' '}
+        {t('projects.chatApp.content.0')}
         <a
           href="https://www.udemy.com/course/freelance-web-design-from-design-to-development-to-making-money/"
           target="_blank"
           rel="noreferrer"
         >
-          Complete Web Design: from Figma to Webflow to Freelancing
+          {t('projects.chatApp.content.1')}
         </a>
         <br />
         <br />
-        Nele pude aprender os princípios sobre design, a utilização de técnicas
-        como o grid de 12 colunas, praticas de seleção de boas cores, imagens e
-        suas respectivas formas de manipulação.
+        {t('projects.chatApp.content.2')}
       </>
     ),
     buttons: [
@@ -159,7 +144,7 @@ export const projects = [
       {
         label: (
           <>
-            Ver Design no Figma <FiFigma />
+            Ver Design <FiFigma />
           </>
         ),
         appearance: 'primary',
@@ -331,7 +316,7 @@ export const projects = [
       {
         label: (
           <>
-            Ver Design no Figma <FiFigma />
+            Ver Design <FiFigma />
           </>
         ),
         appearance: 'primary',

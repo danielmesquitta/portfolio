@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { H6 } from '~/layouts';
 
 export const Container = styled.div`
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 0.4rem;
   border: 1px solid ${({ theme }) => theme.colors.gray._200};
   min-height: 15rem;

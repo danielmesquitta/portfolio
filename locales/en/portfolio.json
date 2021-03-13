@@ -1,0 +1,39 @@
+{
+  "title": "Portfólio",
+  "subtitle": "Conheça meu trabalho",
+  "categories": ["Todos os projetos", "Back-end", "Web", "Mobile", "Design"],
+  "projects": {
+    "doctorTime": {
+      "content": [
+        "Este foi meu primeiro projeto pessoal verdadeiramente full-stack, com uma REST API, versão WEB e MOBILE.",
+        "Ele consiste basicamente em um sistema de agendamento de consultas médicas, onde pacientes e doutores podem se cadastrar e agendar consultas."
+      ]
+    },
+    "trillo": {
+      "content": [
+        "Esse é um site apenas como uma página que tem o intúito de ser uma plataforma que resolveria em apenas um lugar, todos os problemas de uma pessoa em seu período de escolha e preparo para uma viagem.",
+        "Desenvolvido durante o bootcamp ",
+        "Advanced CSS and Sass",
+        ", aperfeiçoou meus conhecimentos na estilização de sites utilizando ferramentas como Sass e features modernas do CSS."
+      ]
+    },
+    "medfy": {
+      "content": [
+        "Um dos principais produtos da minha empresa atual (Estúdio Flow), um sistema para organização de hospitais.",
+        "Nele pude participar na criação e documentação do back-end, na integração entre o front-end e o back-end, na criação de componentes, animações e na responsividade do site."
+      ]
+    },
+    "chatApp": {
+      "content": [
+        "O meu primeiro contato com design fora da empresa que atualmente trabalho. Este projeto foi desenvolvido durante o curso ",
+        " Complete Web Design: from Figma to Webflow to Freelancing.",
+        "Nele pude aprender os princípios sobre design, a utilização de técnicas como o grid de 12 colunas, praticas de seleção de boas cores, imagens e suas respectivas formas de manipulação."
+      ]
+    }
+  },
+  "buttons": {
+    "github": "Ver no github",
+    "site": "Ir para o site",
+    "flow": "Conhecer Estúdio Flow"
+  }
+}

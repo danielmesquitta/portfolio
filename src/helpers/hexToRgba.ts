@@ -1,4 +1,4 @@
-export default (hex: string, opacity: number): string => {
+const hexToRgba = (hex: string, opacity: number): string => {
   switch (opacity) {
     case 1:
       return `${hex}FF`;
@@ -206,3 +206,5 @@ export default (hex: string, opacity: number): string => {
       return hex;
   }
 };
+
+export default hexToRgba;

@@ -24,14 +24,14 @@ export const H2 = styled.h2`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: 1.8rem;
+    font-size: 16px;
   }
 `;
 
 export const H3 = styled.h3`
-  font-size: ${({ theme }) => theme.typography.size.h3 / 10}rem;
+  font-size: ${({ theme }) => theme.typography.size.h3}px;
   line-height: 1.2;
-  letter-spacing: ${({ theme }) => (theme.typography.size.h3 / 10) * 0.2}rem;
+  letter-spacing: ${({ theme }) => theme.typography.size.h3 * 0.2}px;
   font-weight: ${({ theme }) => theme.typography.weight.regular};
   text-transform: uppercase;
 `;
@@ -61,14 +61,13 @@ export const H7 = styled.h6`
 `;
 
 export const P = styled.p`
-  font-size: ${({ theme }) => theme.typography.size.p / 10}rem;
+  font-size: ${({ theme }) => theme.typography.size.p}px;
   line-height: 1.6;
-  letter-spacing: ${({ theme }) => (theme.typography.size.p / 10) * 0.05}rem;
+  letter-spacing: ${({ theme }) => theme.typography.size.p * 0.05}px;
 `;
 
 export const Caption = styled.caption`
-  font-size: ${({ theme }) => theme.typography.size.caption / 10}rem;
+  font-size: ${({ theme }) => theme.typography.size.caption}px;
   line-height: 1.4;
-  letter-spacing: ${({ theme }) =>
-    (theme.typography.size.caption / 10) * 0.05}rem;
+  letter-spacing: ${({ theme }) => theme.typography.size.caption * 0.05}px;
 `;

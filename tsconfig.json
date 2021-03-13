@@ -21,14 +21,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "settings": {
-    "import/resolver": {
-      "typescript": {},
-      "babel-plugin-root-import": {
-        "rootPathPrefix": "~",
-        "rootPathSuffix": "./src"
-      }
-    }
-  }
+  "exclude": ["node_modules"]
 }

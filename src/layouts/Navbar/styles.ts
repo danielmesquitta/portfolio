@@ -154,7 +154,7 @@ const Container = styled(Section)<NavbarContainerProps>`
       a:visited {
         color: ${({ theme }) => theme.colors.gray._000};
         padding: 1.2rem 1rem;
-        font-size: 1.6rem;
+        font-size: 16px;
         opacity: 0.7;
 
         ${({ theme }) => {
@@ -200,6 +200,7 @@ const Container = styled(Section)<NavbarContainerProps>`
       display: none;
       height: 3rem;
       width: 3rem;
+      transform: translateY(-20%);
 
       @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
         display: block;

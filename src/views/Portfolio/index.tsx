@@ -8,13 +8,15 @@ import React, {
 } from 'react';
 import { FiGithub } from 'react-icons/fi';
 
+import useTranslation from 'next-translate/useTranslation';
+
 import { Button, Project } from '~/components';
 import Modal from '~/components/Modal';
 import { ModalButton } from '~/components/Modal/types';
 import { useScrollState, useModalState } from '~/hooks';
 import { Heading } from '~/layouts';
 
-import { categories, projects } from './data';
+import { categories as c, projects as p } from './data';
 import { Section, ButtonsGrid, ProjectsGrid } from './styles';
 
 const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
@@ -26,6 +28,10 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
 
   const { getScrollPosition, getElementPosition } = useScrollState();
   const { setData, data } = useModalState();
+
+  const { t } = useTranslation('portfolio');
+  const categories = c(t);
+  const projects = p(t);
 
   useEffect(() => {
     if (portfolioRef?.current) {
