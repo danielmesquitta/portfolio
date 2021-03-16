@@ -1,15 +1,15 @@
 {
-  "title": "Sobre mim",
-  "subtitle": "Quem sou eu?",
+  "title": "About me",
+  "subtitle": "Who am I?",
   "content": [
-    "Desenvolvedor full-stack preparado pra uma jornada de aprendizado incessante. Apaixonado por tecnologia, programação e principalmente, evolução e crescimento diário.",
-    "Atualmente cursando Sistemas de Informação na Faculdade Pitágoras de Uberlândia e trabalhando na empresa Estúdio Flow em variados projetos, sendo a stack React, React Native, Node e Typescript minha principal nesse ambiente."
+    "Full-stack developer prepared for an endless learning journey. Passionate about technology, programming and especially, evolution and daily growth.",
+    "Currently studying Information Systems at the Pitágoras College in Uberlândia and working at Estúdio Flow in several projects, with the React, React Native, Node and Typescript stack."
   ],
-  "img": "Programador refletindo",
-  "button": "Baixar currículo",
+  "img": "Programmer thinking",
+  "button": "Download CV",
   "features": [
-    "Anos programando",
-    "Commits no último ano",
-    "Repositórios que participei"
+    "Years codding",
+    "Commits in the last year",
+    "Repositories created or currently participating"
   ]
 }

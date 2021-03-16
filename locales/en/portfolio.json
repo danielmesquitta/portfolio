@@ -1,60 +1,73 @@
 {
-  "title": "Portfólio",
-  "subtitle": "Conheça meu trabalho",
-  "categories": ["Todos os projetos", "Back-end", "Web", "Mobile", "Design"],
+  "title": "Portfolio",
+  "subtitle": "Check out my work!",
+  "categories": ["All projects", "Back-end", "Web", "Mobile", "Design"],
   "projects": {
+    "akmos": [
+      "One of the biggest projects I've ever worked on, a system involving the Impakt60 app (a 60-day fitness program, with goals and gamification) and a web application with an interface full of charts and resources for data management.",
+      "Here I was able to create a REST-API, a service to send emails and web sockets to create a chat. Apart from my involvement in the server, I also helped in the app creation, participating in interfaces development and in the chat integration with the backend."
+    ],
+    "icts": [
+      "My first project at the company I currently work for. A risk analysis system to hire people.",
+      "Here I participated in the front-end development team, where we used a REST-API provided by the ICTS team and integrated with this beautiful web app that we created. In this project I participated in the charts creation, in the website responsiveness and in the bug corrections."
+    ],
     "doctorTime": [
-      "Este foi meu primeiro projeto pessoal verdadeiramente full-stack, com uma REST API, versão WEB e MOBILE.",
-      "Ele consiste basicamente em um sistema de agendamento de consultas médicas, onde pacientes e doutores podem se cadastrar e agendar consultas."
+      "This was my first truly full-stack personal project, with a REST-API, WEB and MOBILE versions.",
+      "It basically consists of a system for scheduling medical consultations, where patients and doctors can register and book appointments."
     ],
     "trillo": [
-      "Esse é um site apenas como uma página que tem o intúito de ser uma plataforma que resolveria em apenas um lugar, todos os problemas de uma pessoa em seu período de escolha e preparo para uma viagem.",
-      "Desenvolvido durante o bootcamp ",
+      "This is a website with only one page that aims to be a platform that would solve in one place, all the problems of a person in his period of choice and preparation for a trip.",
+      "Developed during the bootcamp ",
       "Advanced CSS and Sass",
-      ", aperfeiçoou meus conhecimentos na estilização de sites utilizando ferramentas como Sass e features modernas do CSS."
+      ", improved my knowledge in website styling using tools like Sass and modern CSS features."
+    ],
+    "natours": [
+      "This is a website for the presentation of a fake tour scheduling company, created during the bootcamp ",
+      "Advanced CSS and Sass",
+      "The main goal here was to understand how to use Sass to style websites."
     ],
     "medfy": [
-      "Um dos principais produtos da minha empresa atual (Estúdio Flow), um sistema para organização de hospitais.",
-      "Nele pude participar na criação e documentação do back-end, na integração entre o front-end e o back-end, na criação de componentes, animações e na responsividade do site."
+      "One of the main products of my current company (Estúdio Flow), a system that helps organize hospitals.",
+      "Here I was able to participate in the back-end creation and documentation, in the integration between the front-end and the back-end, in the components development, animations and in the site responsiveness."
     ],
     "chatApp": [
-      "O meu primeiro contato com design fora da empresa que atualmente trabalho. Este projeto foi desenvolvido durante o curso ",
+      "My first contact with design outside the company I currently work for. This project was developed during the course ",
       " Complete Web Design: from Figma to Webflow to Freelancing.",
-      "Nele pude aprender os princípios sobre design, a utilização de técnicas como o grid de 12 colunas, praticas de seleção de boas cores, imagens e suas respectivas formas de manipulação."
+      "Here I was able to learn the principles of design, the use of techniques such as the 12-column grid, practices for selecting good colors, images and their respective ways of manipulation."
     ],
     "nexter": [
-      "O meu primeiro contato com técnicas de estilização de sites utilização ferramentas do CSS3 como o display grid.",
-      "Aqui, no curso ",
+      "My first contact with website styling techniques using CSS3 tools such as the display grid.",
+      "Here, in the course ",
       "Advanced CSS and Sass",
-      " construí esse projeto de portfólio para uma falsa companhia imobiliária que precisava apresentar uma boa estratégia de marketing, mostrando seus benefícios, casas disponíveis, preços, etc."
+      " I built this portfolio project for a made up real estate company that needed to present a good marketing strategy, showing its benefits, available houses, prices, etc."
     ],
     "github_explorer": [
-      "O meu primeiro contato com Typescript em um projeto feito para plataformas Web e Mobile com React e React Native, sendo este um agregador de repositórios desenvolvido utilizando a própria API do github.",
-      "Aqui pude experimentar as vantagens do Typescript, uma linguagem que mesmo oferecendo uma tipagem mais forte não perde o dinamismo dado pelo Javascript."
+      "My first contact with Typescript in a project made for Web and Mobile platforms with React and React Native. This is a repository aggregator developed using the github API itself.",
+      "Here I was able to experience the advantages of Typescript, a language that even offering stronger typing does not lose the dynamism given by Javascript."
     ],
     "ecoleta": [
-      "Aplicação com Back-end, Front-end e Mobile, oferecendo um serviço de cadastros e visualização de locais de coleta seletiva, com integração a mapas e uma bela interface.",
-      "Projeto desenvolvido durante a Next Level Week, evento feito pela ",
+      "Application with Back-end, Front-end and Mobile, offering a service to help people find selective collection places, with maps integration and a beautiful interface.",
+      "Project developed during Next Level Week, an event made by ",
       "Rocketseat",
-      ", uma famosa instituição brasileira de ensino de programação."
+      ", a famous Brazilian programming teaching institution."
     ],
     "teamApp": [
-      "Design da Landing Page de um falso produto que seria similar a plataformas como o Teams da Microsoft.",
-      "Criado durante o curso ",
+      "Landing Page design of a made up product that would be similar to platforms like Microsoft's Teams.",
+      "Created during the course ",
       "Complete Web Design: from Figma to Webflow to Freelancing",
-      " onde pude aplicar diversos conhecimentos e técnicas de design."
+      " where I was able to apply my recently acquired design knowledge."
     ],
     "eCommerce": [
-      "Projeto pessoal nas plataforma Web e Mobile que simula um e-commerce de tênis, com funcionalidade de adicionar itens à lista, cálculo do preço total e todas estas funcionalidades básicas esperadas em um sistema de comércio online.",
-      "Este teve o principal objetivo de me ensinar a utilizar o Redux para manipulação dos Estados do React em múltiplos componentes."
+      "Personal project on the Web and Mobile platforms that simulates a sneakers e-commerce, with all these basic functionalities expected in an online commerce system.",
+      "This had the main objective of teaching me how to use Redux to manipulate the React States in multiple components."
     ]
   },
   "buttons": {
-    "github": "Ver no github",
-    "site": "Ir para o site",
-    "flow": "Conhecer Estúdio Flow",
-    "prototype": "Ver protótipo",
-    "figma": "Ver design",
-    "more": "Veja mais no meu github"
+    "github": "View on github",
+    "site": "Go to website",
+    "flow": "Visit Estúdio Flow",
+    "prototype": "View prototype",
+    "figma": "View design",
+    "more": "See more on my github"
   }
 }

@@ -1,26 +1,26 @@
 {
-  "title": "Habilidades",
-  "subtitle": "Transformando complexo em simples",
+  "title": "Skills",
+  "subtitle": ["Transforming ideas", "into reality"],
   "cards": [
     {
       "title": "Back-end",
-      "content": "Experiência com Node.js, bancos relacionais e não relacionais, criação de REST-APIS, envio de e-mails com filas, linux, etc."
+      "content": "Experience with Node.js, relational and non-relational databases, REST-APIS creation, sending e-mails with queues, linux, etc."
     },
     {
       "title": "Web",
-      "content": "Utilização de ferramentas modernas como React e Next para criação de sites dinâmicos, rápidos e responsivos."
+      "content": "Use of modern tools such as React and Next to create dynamic, fast and responsive websites."
     },
     {
       "title": "Mobile",
-      "content": "Uso do React Native para criação de aplicativos intuitivos e amigáveis ao usuário para ambas plataformas Android e IOS."
+      "content": "Using React Native to develop intuitive and user-friendly applications for both Android and IOS platforms."
     },
     {
-      "title": "Metodologias Ágeis",
-      "content": "Prática de metodologias ágeis no ciclo de produção, com feedbacks e interações constantes para garantir agilidade e eficiência no processo."
+      "title": "Agile Methodologies",
+      "content": "Practicing agile methodologies in the production cycle, with constant feedbacks and interactions to ensure agility and efficiency in the process."
     },
     {
       "title": "UX / UI",
-      "content": "Foco na experiência do usuário, onde todos os detalhes realmente importam e pensar fora da caixa apresenta-se como essencial."
+      "content": "Focus on the user experience, where all the details really matter and thinking outside the box is essential."
     }
   ]
 }

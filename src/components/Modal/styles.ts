@@ -78,7 +78,7 @@ export const Container = styled.div`
     border-radius: 4px;
 
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-      height: 25vh;
+      height: 20vh;
     }
   }
 

@@ -1,0 +1,73 @@
+{
+  "title": "Portfólio",
+  "subtitle": "Conheça meu trabalho",
+  "categories": ["Todos os projetos", "Back-end", "Web", "Mobile", "Design"],
+  "projects": {
+    "akmos": [
+      "Um dos maiores projetos em que já trabalhei, um sistema envolvendo o aplicativo Impakt60 (um programa fitness de 60 dias, com objetivos e gamificação) e um web app com uma interface cheia de gráficos e recursos para administração dos dados.",
+      "Aqui pude criar uma REST-API, um serviço de envio de emails e utilizar web sockets para criação de um chat. Fora meu envolvimento no servidor, também auxiliei na criação do aplicativo, participando no desenvolvimento de interfaces e da integração do chat."
+    ],
+    "icts": [
+      "Meu primeiro projeto na empresa em que atualmente trabalho. Um sistema de análise de riscos de contratação de pessoas.",
+      "Aqui participei do time de desenvolvimento front-end, onde utilizamos uma REST-API provida pelo time do ICTS e integramos com este belo web app que criamos. Neste projeto tive participação na criação de gráficos, na responsividade do site e na correção de bugs que ocorreram durante o desenvolvimento do site."
+    ],
+    "doctorTime": [
+      "Este foi meu primeiro projeto pessoal verdadeiramente full-stack, com uma REST API, versão WEB e MOBILE.",
+      "Ele consiste basicamente em um sistema de agendamento de consultas médicas, onde pacientes e doutores podem se cadastrar e marcar agendamentos."
+    ],
+    "trillo": [
+      "Esse é um site apenas com uma página que tem o intúito de ser uma plataforma que resolveria em apenas um lugar, todos os problemas de uma pessoa em seu período de escolha e preparo para uma viagem.",
+      "Desenvolvido durante o bootcamp ",
+      "Advanced CSS and Sass",
+      ", aperfeiçoou meus conhecimentos na estilização de sites utilizando ferramentas como Sass e features modernas do CSS."
+    ],
+    "medfy": [
+      "Um dos principais produtos da minha empresa atual (Estúdio Flow), um sistema para organização de hospitais.",
+      "Nele pude participar na criação e documentação do back-end, na integração entre o front-end e o back-end, na criação de componentes, animações e na responsividade do site."
+    ],
+    "chatApp": [
+      "O meu primeiro contato com design fora da empresa que atualmente trabalho. Este projeto foi desenvolvido durante o curso ",
+      " Complete Web Design: from Figma to Webflow to Freelancing.",
+      "Nele pude aprender os princípios sobre design, a utilização de técnicas como o grid de 12 colunas, praticas de seleção de boas cores, imagens e suas respectivas formas de manipulação."
+    ],
+    "nexter": [
+      "O meu primeiro contato com técnicas de estilização de sites utilizando ferramentas do CSS3 como o display grid.",
+      "Aqui, no curso ",
+      "Advanced CSS and Sass",
+      " construí esse projeto de portfólio para uma falsa companhia imobiliária que precisava apresentar uma boa estratégia de marketing, mostrando seus benefícios, casas disponíveis, preços, etc."
+    ],
+    "natours": [
+      "Este é um site de apresentação de uma falsa empresa de agendamento de tours, criado durante o bootcamp ",
+      "Advanced CSS and Sass",
+      "O principal objetivo aqui era entender como utilizar o Sass para estilizar sites."
+    ],
+    "github_explorer": [
+      "O meu primeiro contato com Typescript em um projeto feito para plataformas Web e Mobile com React e React Native, sendo este um agregador de repositórios desenvolvido utilizando a própria API do github.",
+      "Aqui pude experimentar as vantagens do Typescript, uma linguagem que mesmo oferecendo uma tipagem mais forte não perde o dinamismo dado pelo Javascript."
+    ],
+    "ecoleta": [
+      "Aplicação com Back-end, Front-end e Mobile, oferecendo um serviço de cadastros e visualização de locais de coleta seletiva, com integração a mapas e uma bela interface.",
+      "Projeto desenvolvido durante a Next Level Week, evento feito pela ",
+      "Rocketseat",
+      ", uma famosa instituição brasileira de ensino de programação."
+    ],
+    "teamApp": [
+      "Design da Landing Page de um falso produto que seria similar a plataformas como o Teams da Microsoft.",
+      "Criado durante o curso ",
+      "Complete Web Design: from Figma to Webflow to Freelancing",
+      " onde pude aplicar diversos conhecimentos e técnicas de design."
+    ],
+    "eCommerce": [
+      "Projeto pessoal nas plataforma Web e Mobile que simula um e-commerce de tênis, com funcionalidade de adicionar itens à lista, cálculo do preço total e todas estas funcionalidades básicas esperadas em um sistema de comércio online.",
+      "Este teve o principal objetivo de me ensinar a utilizar o Redux para manipulação dos Estados do React em múltiplos componentes."
+    ]
+  },
+  "buttons": {
+    "github": "Ver no github",
+    "site": "Ir para o site",
+    "flow": "Conhecer Estúdio Flow",
+    "prototype": "Ver protótipo",
+    "figma": "Ver design",
+    "more": "Veja mais no meu github"
+  }
+}

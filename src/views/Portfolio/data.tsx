@@ -14,10 +14,10 @@ export const projects = (t: Translate) => [
     tags: [t`categories.1`, t`categories.3`],
     content: (
       <>
-        {t`projects.medfy.0`}
+        {t`projects.akmos.0`}
         <br />
         <br />
-        {t`projects.medfy.1`}
+        {t`projects.akmos.1`}
       </>
     ),
     buttons: [
@@ -64,10 +64,10 @@ export const projects = (t: Translate) => [
     tags: [t`categories.2`],
     content: (
       <>
-        {t`projects.medfy.0`}
+        {t`projects.icts.0`}
         <br />
         <br />
-        {t`projects.medfy.1`}
+        {t`projects.icts.1`}
       </>
     ),
     buttons: [
@@ -417,18 +417,17 @@ export const projects = (t: Translate) => [
     tags: ['Web', 'Design'],
     content: (
       <>
-        {t`projects.nexter.0`}
-        <br />
-        <br />
-        {t`projects.nexter.1`}
+        {t`projects.natours.0`}
         <a
           href="https://www.udemy.com/course/advanced-css-and-sass/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_437497333833_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1031438_._pd__._&matchtype=b&gclid=CjwKCAjwrvv3BRAJEiwAhwOdM3Qp3Le-a-Cd9EiBy0y6Mc9vztPVvOUyeIgiC2DgsSLOPoZzk28RFRoCixEQAvD_BwE"
           target="_blank"
           rel="noreferrer"
         >
-          {t`projects.nexter.2`}
+          {t`projects.natours.1`}
         </a>
-        {t`projects.nexter.3`}
+        <br />
+        <br />
+        {t`projects.natours.2`}
       </>
     ),
     buttons: [
@@ -436,7 +435,7 @@ export const projects = (t: Translate) => [
         label: t`buttons.site`,
         appearance: 'primary',
         as: 'a',
-        href: 'https://danielmesquitta.github.io/nexter/',
+        href: 'https://danielmesquitta.github.io/natours',
         target: '_blank',
         rel: 'noreferrer',
         hasHover: false,
@@ -450,7 +449,7 @@ export const projects = (t: Translate) => [
         appearance: 'primary',
         outline: true,
         as: 'a',
-        href: 'https://github.com/danielmesquitta/nexter',
+        href: 'https://github.com/danielmesquitta/natours',
         target: '_blank',
         rel: 'noreferrer',
         hasHover: false,

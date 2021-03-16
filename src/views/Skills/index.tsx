@@ -49,7 +49,17 @@ const Skills = forwardRef<HTMLElement, any>((props, ref) => {
   return (
     <Section {...props} ref={ref}>
       <Grid>
-        <Heading id="skills" title={t`title`} subTitle={t`subtitle`} />
+        <Heading
+          id="skills"
+          title={t`title`}
+          subTitle={
+            <>
+              {t`subtitle.0`}
+              <br />
+              {t`subtitle.1`}
+            </>
+          }
+        />
         <Swiper
           loop
           spaceBetween={30}

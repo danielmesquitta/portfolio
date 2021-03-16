@@ -1,0 +1,10 @@
+{
+  "title": "Contate-me",
+  "subtitle": "Quer conversar?",
+  "inputs": { "name": "Nome", "email": "E-mail", "message": "Sua mensagem" },
+  "button": "Enviar",
+  "toasts": {
+    "success": "E-mail enviado com sucesso",
+    "error": "Falha ao enviar email"
+  }
+}

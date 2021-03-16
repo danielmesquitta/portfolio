@@ -1,0 +1,6 @@
+{
+  "project": { "button": "Saiba mais" },
+  "navbar": {
+    "links": ["Home", "Habilidades", "Portfólio", "Sobre", "Contate-me"]
+  }
+}
