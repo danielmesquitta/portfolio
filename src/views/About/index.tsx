@@ -10,7 +10,7 @@ import Dots from '../../assets/dots.svg';
 import { Section, Grid } from './styles';
 
 const About = forwardRef<HTMLElement, any>((props, ref) => {
-  const { t } = useTranslation('about');
+  const { t, lang } = useTranslation('about');
 
   return (
     <Section {...props} ref={ref}>
@@ -23,7 +23,15 @@ const About = forwardRef<HTMLElement, any>((props, ref) => {
           {t`content.1`}
         </P>
         <img src="/about.png" alt={t`img`} />
-        <Button appearance="primary">
+        <Button
+          appearance="primary"
+          as="a"
+          href={`https://raw.githubusercontent.com/danielmesquitta/danielmesquitta/main/docs/Daniel%20Mesquita%20-%20${
+            lang === 'en' ? 'Resume' : 'Currículo'
+          }.pdf`}
+          target="_blank"
+          rel="noreferrer"
+        >
           {t`button`}
           <FiDownload />
         </Button>

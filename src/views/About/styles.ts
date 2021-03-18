@@ -30,7 +30,7 @@ export const Grid = styled(GridLayout)`
     }
   }
 
-  > button {
+  > a {
     position: relative;
     grid-column: 1 / -1;
     margin-right: auto;
