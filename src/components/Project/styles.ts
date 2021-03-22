@@ -12,7 +12,7 @@ export const Container = styled.div<ProjectContainerProps>`
   ${({ theme, isVisible }) => {
     const { slideUp, speed, transitions } = theme.animations;
     const gridIds = [];
-    for (let i = 1; i <= 12; i += 1) {
+    for (let i = 1; i <= 9 /* Projects number */; i += 1) {
       gridIds.push(i);
     }
     const getSlideSpeed = (id: number, selectedSpeed: string) =>

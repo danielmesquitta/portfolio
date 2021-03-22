@@ -106,7 +106,7 @@ const Portfolio = forwardRef<HTMLElement, any>((props, ref) => {
         </ButtonsGrid>
         <ProjectsGrid ref={portfolioRef}>
           {projects.map(
-            ({ title, subTitles, img, tags }, index) =>
+            ({ title, subTitles, img, tags }) =>
               selectedFilters.findIndex((filter) => tags?.includes(filter)) !==
                 -1 && (
                 <Project
