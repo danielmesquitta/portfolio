@@ -28,9 +28,8 @@ const Contact = forwardRef<HTMLElement, any>((props, ref) => {
         subject: `E-mail from ${data.email}`,
         text: data.message,
       };
-      console.log(process.env.MAIL_SERVICE);
       await axios
-        .post(process.env.MAIL_SERVICE, request)
+        .post(process.env.NEXT_PUBLIC_MAIL_SERVICE, request)
         .then(() => {
           reset();
           toast.success(t`toasts.success`);
