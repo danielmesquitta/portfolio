@@ -22,8 +22,14 @@ const Contact = forwardRef<HTMLElement, any>((props, ref) => {
   const handleSubmit: SubmitHandler<FormData> = useCallback(
     async (data, { reset }) => {
       setLoading(true);
+      const request = {
+        from: data.name,
+        to: 'danielmesquitta123@gmail.com',
+        subject: `E-mail from ${data.email}`,
+        text: data.message,
+      };
       await axios
-        .post('/api/contact', data)
+        .post('https://danielmesquitta-mail.herokuapp.com', request)
         .then(() => {
           reset();
           toast.success(t`toasts.success`);
@@ -31,7 +37,7 @@ const Contact = forwardRef<HTMLElement, any>((props, ref) => {
         .catch(() => toast.error(t`toasts.error`));
       setLoading(false);
     },
-    []
+    [t]
   );
 
   return (
