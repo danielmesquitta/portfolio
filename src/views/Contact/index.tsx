@@ -28,8 +28,9 @@ const Contact = forwardRef<HTMLElement, any>((props, ref) => {
         subject: `E-mail from ${data.email}`,
         text: data.message,
       };
+      console.log(process.env.MAIL_SERVICE);
       await axios
-        .post('https://danielmesquitta-mail.herokuapp.com', request)
+        .post(process.env.MAIL_SERVICE, request)
         .then(() => {
           reset();
           toast.success(t`toasts.success`);

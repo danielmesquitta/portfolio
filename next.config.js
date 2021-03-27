@@ -1,3 +1,5 @@
 const nextTranslate = require('next-translate');
 
-module.exports = { ...nextTranslate() };
+const env = require('./.env.json');
+
+module.exports = { ...nextTranslate(), env };
