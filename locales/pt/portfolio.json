@@ -4,8 +4,8 @@
   "categories": ["Todos os projetos", "Back-end", "Web", "Mobile", "Design"],
   "projects": {
     "akmos": [
-      "Um dos maiores projetos em que já trabalhei, um sistema envolvendo o aplicativo Impakt60 (um programa fitness de 60 dias, com objetivos e gamificação) e um web app com uma interface cheia de gráficos e recursos para administração dos dados.",
-      "Aqui pude criar uma REST-API, um serviço de envio de emails e utilizar web sockets para criação de um chat. Fora meu envolvimento no servidor, também auxiliei na criação do aplicativo, participando no desenvolvimento de interfaces e da integração do chat."
+      "Um sistema envolvendo o aplicativo Impakt60 (um programa fitness de 60 dias, com objetivos e gamificação) e um web app de administração.",
+      "Aqui pude criar uma REST-API, um serviço de envio de emails e utilizar web sockets para criação de um chat. Auxiliei na criação do aplicativo, no desenvolvimento de interfaces e na integração do chat. Infelizmente o projeto não chegou ao fim por falta de orçamento"
     ],
     "icts": [
       "Meu primeiro projeto na empresa em que atualmente trabalho. Um sistema de análise de riscos de contratação de pessoas.",

@@ -4,12 +4,12 @@
   "categories": ["All projects", "Back-end", "Web", "Mobile", "Design"],
   "projects": {
     "akmos": [
-      "One of the biggest projects I've ever worked on, a system involving the Impakt60 app (a 60-day fitness program, with goals and gamification) and a web application with an interface full of charts and resources for data management.",
-      "Here I was able to create a REST-API, a service to send emails and web sockets to create a chat. Apart from my involvement in the server, I also helped in the app creation, participating in interfaces development and in the chat integration with the backend."
+      "A system involving the Impakt60 app (a 60-day fitness program, with goals and gamification) and a management web application.",
+      "Here I was able to create a REST-API, a service to send emails and web sockets in a chat. I also helped in the app creation, interfaces development and in the chat integration with the backend."
     ],
     "icts": [
-      "My first project at the company I currently work for. A risk analysis system to hire people.",
-      "Here I participated in the front-end development team, where we used a REST-API provided by the ICTS team and integrated with this beautiful web app that we created. In this project I participated in the charts creation, in the website responsiveness and in the bug corrections."
+      "My first project at Estúdio Flow. A risk analysis system to hire people.",
+      "Here I participated in the front-end development team, we integrated a REST-API to this beautiful web app that we created. I participated in the charts creation, in the website responsiveness and in the bug corrections."
     ],
     "doctorTime": [
       "This was my first truly full-stack personal project, with a REST-API, WEB and MOBILE versions.",

@@ -8,81 +8,81 @@ export const categories = (t: Translate) =>
   generateArray(5).map((id) => t(`categories.${id}`));
 
 export const projects = (t: Translate) => [
-  //  {
-  //    title: 'Akmos',
-  //    subTitles: ['Node', 'Sequelize', 'React', 'React Native'],
-  //    tags: [t`categories.1`, t`categories.3`],
-  //    content: (
-  //      <>
-  //        {t`projects.akmos.0`}
-  //        <br />
-  //        <br />
-  //        {t`projects.akmos.1`}
-  //      </>
-  //    ),
-  //    buttons: [
-  //      {
-  //        label: t`buttons.flow`,
-  //        appearance: 'primary',
-  //        as: 'a',
-  //        href: 'http://estudioflow.com.br/',
-  //        target: '_blank',
-  //        rel: 'noreferrer',
-  //        hasHover: false,
-  //      },
-  //    ],
-  //    img: '/akmos.png',
-  //  },
-  //  {
-  //    title: 'Medfy',
-  //    subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
-  //    tags: [t`categories.1`, t`categories.2`],
-  //    content: (
-  //      <>
-  //        {t`projects.medfy.0`}
-  //        <br />
-  //        <br />
-  //        {t`projects.medfy.1`}
-  //      </>
-  //    ),
-  //    buttons: [
-  //      {
-  //        label: t`buttons.flow`,
-  //        appearance: 'primary',
-  //        as: 'a',
-  //        href: 'http://estudioflow.com.br/',
-  //        target: '_blank',
-  //        rel: 'noreferrer',
-  //        hasHover: false,
-  //      },
-  //    ],
-  //    img: '/medfy.png',
-  //  },
-  //  {
-  //    title: 'ICTS',
-  //    subTitles: ['React', 'Apexcharts'],
-  //    tags: [t`categories.2`],
-  //    content: (
-  //      <>
-  //        {t`projects.icts.0`}
-  //        <br />
-  //        <br />
-  //        {t`projects.icts.1`}
-  //      </>
-  //    ),
-  //    buttons: [
-  //      {
-  //        label: t`buttons.flow`,
-  //        appearance: 'primary',
-  //        as: 'a',
-  //        href: 'http://estudioflow.com.br/',
-  //        target: '_blank',
-  //        rel: 'noreferrer',
-  //        hasHover: false,
-  //      },
-  //    ],
-  //    img: '/icts.png',
-  //  },
+  {
+    title: 'Akmos',
+    subTitles: ['Node', 'Sequelize', 'React', 'React Native'],
+    tags: [t`categories.1`, t`categories.3`],
+    content: (
+      <>
+        {t`projects.akmos.0`}
+        <br />
+        <br />
+        {t`projects.akmos.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/akmos.png',
+  },
+  {
+    title: 'Medfy',
+    subTitles: ['Typescript', 'Node', 'Knex', 'Next'],
+    tags: [t`categories.1`, t`categories.2`],
+    content: (
+      <>
+        {t`projects.medfy.0`}
+        <br />
+        <br />
+        {t`projects.medfy.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/medfy.png',
+  },
+  {
+    title: 'ICTS',
+    subTitles: ['React', 'Apexcharts'],
+    tags: [t`categories.2`],
+    content: (
+      <>
+        {t`projects.icts.0`}
+        <br />
+        <br />
+        {t`projects.icts.1`}
+      </>
+    ),
+    buttons: [
+      {
+        label: t`buttons.flow`,
+        appearance: 'primary',
+        as: 'a',
+        href: 'https://estudioflow.com.br/',
+        target: '_blank',
+        rel: 'noreferrer',
+        hasHover: false,
+      },
+    ],
+    img: '/icts.png',
+  },
   {
     title: 'DoctorTime',
     subTitles: [

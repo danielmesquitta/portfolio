@@ -22,16 +22,25 @@ const Modal: React.FC<ModalProps> = ({
       <Wrapper isVisible={isVisible}>
         <Background onClick={() => setIsVisible(false)} />
         <Container>
-          <button type="button" onClick={() => setIsVisible(false)}>
-            <FiXCircle />
-          </button>
-          {images.map(({ alt, ...rest }) => (
-            <img {...rest} alt={alt} />
-          ))}
-          {title && <H7>{title}</H7>}
-          <hr />
-          <P>{content}</P>
-          {children}
+          <header>
+            <button type="button" onClick={() => setIsVisible(false)}>
+              <FiXCircle />
+            </button>
+
+            {images.map(({ alt, ...rest }) => (
+              <img {...rest} alt={alt} />
+            ))}
+
+            {title && <H7>{title}</H7>}
+            <hr />
+          </header>
+
+          <div>
+            {content && <P>{content}</P>}
+
+            {children}
+          </div>
+
           <footer>
             {buttons.map(({ label, ...rest }) => (
               <Button key={String(label)} {...rest}>

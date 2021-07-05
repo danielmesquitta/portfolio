@@ -11,13 +11,18 @@ export const Container = styled.div<ProjectContainerProps>`
 
   ${({ theme, isVisible }) => {
     const { slideUp, speed, transitions } = theme.animations;
+
     const gridIds = [];
-    for (let i = 1; i <= 9 /* Projects number */; i += 1) {
+
+    for (let i = 1; i <= 12 /* Projects number */; i += 1) {
       gridIds.push(i);
     }
+
     const getSlideSpeed = (id: number, selectedSpeed: string) =>
       Number(selectedSpeed.replace('s', '')) * id;
+
     const getDelay = (id: number) => ((100 / gridIds.length) * id) / 2;
+
     if (isVisible) {
       return gridIds.map(
         (id) => css`
@@ -28,6 +33,7 @@ export const Container = styled.div<ProjectContainerProps>`
         `
       );
     }
+
     return css`
       opacity: 0;
     `;
